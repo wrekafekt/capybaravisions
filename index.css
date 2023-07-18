@@ -1,0 +1,86 @@
+body {
+  font: 1.2em;
+  font-family: "Hiragino Kaku Gothic Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+    Meiryo, farial, helvetica, clean, sans-serif;
+  max-width: 43em;
+  margin: auto;
+  background-image: url('gradient.png');
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: auto;
+}
+img {
+  display: block;
+  margin: auto;
+  max-width: 20em;
+  border: 1px solid #808080;
+}
+img:hover {
+  border: 1px solid #000000;
+}
+.m_box {
+  border: 1px solid #808080;
+  margin: 1em;
+  background-color: #fff;
+}
+.m_box_red {
+  border: 1px solid #000000;
+  margin: 1em;
+  background-color: #f5f5f5;
+}
+a {
+  color: #000000;
+  text-decoration: underline;
+}
+.m_box_bar {
+  background: #808080;
+  color: #fff;
+}
+.m_box_bar_red {
+  background: #000000;
+  color: #fff;
+}
+h2 {
+  margin-top: 0.001em;
+  margin-bottom: 0.001em;
+  margin-left: 0.25em;
+  font-size: 1.1em;
+}
+h3 {
+  margin-left: 0.3em;
+  font-size: 1em;
+  margin-top: 0.3em;
+  margin-bottom: 0.1em;
+  text-decoration: underline;
+  text-align: center;
+  font-weight: 700;
+}
+h2.m_box {
+  background-color: #808080;
+}
+h2.box {
+  background-color: #d3d3d3;
+}
+p {
+  margin: 0.5em;
+  margin-left: 1em;
+  color: #000000b8;
+}
+.box {
+  border: 1px solid #808080;
+  color: #808080;
+  margin: 1em;
+}
+.box_bar {
+  background: #d3d3d3;
+  color: #525252;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
