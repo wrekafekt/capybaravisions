@@ -1,27 +1,56 @@
-#banner {
-    max-width: 620px;
-    width: 100%;
-    display: block;
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 auto;
+    padding: 2em;
 }
 
-@media screen and (max-width: 500px) {
-    #banner {
-        max-width: 500px;
-    }
+.logo img {
+    width: 100%;
+    max-width: 620px;
+    margin-bottom: 2em;
 }
 
-@media only screen and (max-width: 600px) {
-    banner {
-        background-color: black;
-    }
+.welcome-box, .minting-box, .about-box {
+    background: #fff;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    border-radius: 5px;
+    box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
 }
 
-.box {
-    border: 1px solid #343434;
+.music-player {
+    margin-bottom: 2em;
 }
 
-.box img {
-    margin-bottom: 15px;
+.twitter-link a, .minting-box a {
+    color: #1DA1F2;
+    text-decoration: none;
+}
+
+.image-box img {
+    width: 100%;
     max-width: 600px;
+    margin-bottom: 2em;
+}
+
+.about-box p {
+    margin-bottom: 1em;
+}
+
+a:hover {
+    color: #0D8ED5;
 }
