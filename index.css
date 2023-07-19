@@ -12,13 +12,16 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
     line-height: 1.6;
 }
 
 .container {
     width: 90%;
     max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo img {
@@ -49,6 +52,11 @@ body {
     width: 100%;
     max-width: 600px;
     margin-bottom: 2em;
+    transition: transform 0.3s ease;
+}
+
+.image-box img:hover {
+    transform: scale(1.05);
 }
 
 .about-box p {
@@ -67,17 +75,6 @@ a:hover {
     color: #0D8ED5;
 }
 
-.image-box img {
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 2em;
-    transition: transform 0.3s ease;
-}
-
-.image-box img:hover {
-    transform: scale(1.05);
-}
-/* Add this in your CSS file */
 .theme-switch-wrapper {
     display: flex;
     align-items: center;
@@ -135,7 +132,7 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
-/* Dark mode */
+
 html[data-theme='dark'] {
     background-color: #1f1f1f;
     color: #f1f1f1;
@@ -146,4 +143,3 @@ html[data-theme='dark'] .minting-box,
 html[data-theme='dark'] .about-box {
     background-color: #2d2d2d;
 }
-
