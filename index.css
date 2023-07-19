@@ -58,3 +58,22 @@ body {
 a:hover {
     color: #0D8ED5;
 }
+
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0D8ED5;
+}
+
+.image-box img {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 2em;
+    transition: transform 0.3s ease;
+}
+
+.image-box img:hover {
+    transform: scale(1.05);
+}
