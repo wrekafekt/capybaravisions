@@ -50,12 +50,12 @@ body {
 
 .image-box {
     width: 100%;
-    max-width: 600px;
+    max-width: 3200px;
     margin-bottom: 2em;
     overflow: hidden; /* add this line */
 }
 .image-box img {
-    width: 200%; /* changed from 100% to 200% */
+    width: 400%; /* changed from 100% to 200% */
     position: relative;
     left: -100%;
     transition: transform 0.3s ease;
