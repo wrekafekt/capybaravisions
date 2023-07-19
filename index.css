@@ -49,12 +49,12 @@ body {
 }
 
 .image-box {
-    width: 200%;
-    max-width: 600px;
+    width: 100%;
+    max-width: 1200px;
     margin-bottom: 2em;
 }
 .image-box img {
-    width: 100%; /* changed from 100% to 200% */
+    width: 200%; /* changed from 100% to 200% */
     position: relative;
     left: -200%;
     transition: transform 0.3s ease;
