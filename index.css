@@ -167,3 +167,17 @@ nav ul li a {
 nav ul li a:hover {
   color: #0D8ED5;
 }
+
+.parallax {
+  /* The image used */
+  background-image: url("peek.jpg");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
