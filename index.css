@@ -135,3 +135,15 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+/* Dark mode */
+html[data-theme='dark'] {
+    background-color: #1f1f1f;
+    color: #f1f1f1;
+}
+
+html[data-theme='dark'] .welcome-box,
+html[data-theme='dark'] .minting-box,
+html[data-theme='dark'] .about-box {
+    background-color: #2d2d2d;
+}
+
