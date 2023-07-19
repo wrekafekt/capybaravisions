@@ -147,8 +147,15 @@ html[data-theme='dark'] .minting-box,
 html[data-theme='dark'] .about-box {
     background-color: #2d2d2d;
 }
+nav {
+  text-align: center;
+  padding: 1em;
+  background-color: #fff;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
 nav ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -159,13 +166,14 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #333;
   text-decoration: none;
-  transition: color 0.3s ease;
+  color: #333;
+  font-size: 1.1em;
+  transition: color 0.3s ease-out;
 }
 
 nav ul li a:hover {
-  color: #0D8ED5;
+  color: #1DA1F2;
 }
 
 .parallax {
