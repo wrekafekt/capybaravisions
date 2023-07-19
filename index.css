@@ -1,18 +1,24 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background: #f4f4f4;
     color: #333;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
     line-height: 1.6;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    padding: 2em;
+    width: 90%;
+    max-width: 800px;
 }
 
 .logo img {
@@ -28,8 +34,6 @@ body {
     border-radius: 5px;
     box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.1);
     text-align: center;
-    width: 100%;
-    max-width: 800px;
 }
 
 .music-player {
