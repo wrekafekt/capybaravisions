@@ -52,12 +52,11 @@ body {
     width: 100%;
     max-width: 600px;
     margin-bottom: 2em;
-    overflow: hidden; /* add this line */
 }
 .image-box img {
     width: 100%; /* changed from 100% to 200% */
     position: relative;
-    left: -100%;
+    left: -200%;
     transition: transform 0.3s ease;
 }
 
