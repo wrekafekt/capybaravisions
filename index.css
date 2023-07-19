@@ -147,3 +147,23 @@ html[data-theme='dark'] .minting-box,
 html[data-theme='dark'] .about-box {
     background-color: #2d2d2d;
 }
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 1em;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #0D8ED5;
+}
