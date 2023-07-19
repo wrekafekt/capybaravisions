@@ -1,13 +1,13 @@
 body {
   font: 1.2em;
   font-family: "Hiragino Kaku Gothic Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
-    Meiryo, farial, helvetica, clean, sans-serif;
+    Meiryo, Arial, Helvetica, clean, sans-serif;
   max-width: 43em;
   margin: auto;
   background-image: url('gradient.png');
-  background-repeat: repeat-x;
   background-position: top center;
-  background-size: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 img {
   display: block;
