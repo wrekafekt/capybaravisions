@@ -69,14 +69,14 @@
         }
       },
       "bubble": {
-        "distance": 200,
+        "distance": 1600,
         "size": 10,
         "duration": 2,
         "opacity": 0.8,
         "speed": 3
       },
       "repulse": {
-        "distance": 500,
+        "distance": 1600,
         "duration": 0.4
       },
       "push": {
