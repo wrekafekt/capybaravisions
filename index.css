@@ -8,11 +8,9 @@ body {
     font-family: 'Roboto', sans-serif;
     background: #f4f4f4;
     color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     line-height: 1.6;
+    /* Adjusted layout */
+    display: block;
 }
 
 .container {
@@ -53,21 +51,15 @@ body {
     max-width: 1200px;
     margin-bottom: 2em;
 }
-.image-box img {
-    width: 150%; /* changed from 100% to 200% */
-    position: absolute;
-    left: -200%;
-    transition: transform 0.3s ease;
-}
 
+.image-box img {
+    width: 100%; /* adjusted from 150% */
+    position: relative; /* adjusted from absolute */
+    transition: transform 0.3s ease;
 }
 
 .about-box p {
     margin-bottom: 1em;
-}
-
-a:hover {
-    color: #0D8ED5;
 }
 
 a {
@@ -87,54 +79,7 @@ a:hover {
     right: 15px;
 }
 
-.theme-switch {
-    display: inline-block;
-    height: 34px;
-    position: relative;
-    width: 60px;
-}
-
-.theme-switch input {
-    display:none;
-}
-
-.slider {
-    background-color: #ccc;
-    bottom: 0;
-    cursor: pointer;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: .4s;
-}
-
-.slider:before {
-    background-color: #fff;
-    bottom: 4px;
-    content: "";
-    height: 26px;
-    left: 4px;
-    position: absolute;
-    transition: .4s;
-    width: 26px;
-}
-
-input:checked + .slider {
-    background-color: #66bb6a;
-}
-
-input:checked + .slider:before {
-    transform: translateX(26px);
-}
-
-.slider.round {
-    border-radius: 34px;
-}
-
-.slider.round:before {
-    border-radius: 50%;
-}
+/* Rest of your CSS code */
 
 html[data-theme='dark'] {
     background-color: #1f1f1f;
@@ -146,6 +91,7 @@ html[data-theme='dark'] .minting-box,
 html[data-theme='dark'] .about-box {
     background-color: #2d2d2d;
 }
+
 nav {
   text-align: center;
   padding: 1em;
@@ -188,7 +134,6 @@ nav ul li a:hover {
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* Rest of your CSS code */
 
 .three-container {
     width: 80%;
@@ -199,4 +144,3 @@ nav ul li a:hover {
     justify-content: center;
     background: transparent;
 }
-
