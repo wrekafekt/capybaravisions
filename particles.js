@@ -108,8 +108,8 @@ var pJS = function(tag_id, params){
           }
         },
         bubble:{
-          distance: 200,
-          size: 80,
+          distance: 100,
+          size: 40,
           duration: 0.4
         },
         repulse:{
