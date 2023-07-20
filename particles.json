@@ -11,14 +11,7 @@
       "value": "#000000"
     },
     "shape": {
-      "type": "circle",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 5
-      },
+      "type": "image", /* added the shape object with type: image */
       "image": {
         "src": "favicon-32x32.png",
         "width": 100,
