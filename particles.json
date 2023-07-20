@@ -10,7 +10,7 @@
     "shape": {
       "type": "image",
       "image": {
-        "src": "https://raw.githubusercontent.com/wrekafekt/capybaravisions/main/favicon-32x32.png",
+        "src": "https://raw.githubusercontent.com/wrekafekt/capybaravisions/main/capy.png",
         "width": 200,
         "height": 200
       }
@@ -31,7 +31,7 @@
       "distance": 100,
       "color": "#420690",
       "opacity": 0.8,
-      "width": 2
+      "width": 1
     },
     "move": {
       "enable": true,
@@ -42,7 +42,7 @@
       "out_mode": "out",
       "bounce": false,
       "attract": {
-        "enable": false,
+        "enable": true,
         "rotateX": 600,
         "rotateY": 1200
       }
@@ -69,14 +69,14 @@
         }
       },
       "bubble": {
-        "distance": 1600,
-        "size": 10,
+        "distance": 400,
+        "size": 90,
         "duration": 2,
         "opacity": 0.8,
         "speed": 3
       },
       "repulse": {
-        "distance": 1600,
+        "distance": 400,
         "duration": 0.4
       },
       "push": {
