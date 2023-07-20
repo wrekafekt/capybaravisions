@@ -43,11 +43,17 @@
     }
   }
 </script>
+<script>
+  particlesJS.load('particles-js', 'path/to/particles.json', function() {
+    console.log('particles.js loaded - callback');
+  });
+</script>
+
 </head>
 <body>
     <div id="three-container"></div>
     <div id="particles-js"></div>
-<script src="particles.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <div class="theme-switch-wrapper">
     <label class="theme-switch" for="checkbox">
         <input type="checkbox" id="checkbox" />
