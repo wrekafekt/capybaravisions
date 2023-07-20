@@ -29,7 +29,7 @@
       "value": 15,
       "random": true,
       "anim": {
-        "enable": true,
+        "enable": false,
         "speed": 80,
         "size_min": 0.1,
         "sync": false
@@ -37,7 +37,7 @@
     },
     "line_linked": {
       "enable": true,
-      "distance": 250,
+      "distance": 100,
       "color": "#420690",
       "opacity": 0.8,
       "width": 2
