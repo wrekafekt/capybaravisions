@@ -11,7 +11,7 @@
       "value": "#000000"
     },
     "shape": {
-      "type": "image", /* added the shape object with type: image */
+      "type": "image",
       "image": {
         "src": "https://raw.githubusercontent.com/wrekafekt/capybaravisions/main/favicon-32x32.png",
         "width": 100,
