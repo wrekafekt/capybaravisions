@@ -55,7 +55,7 @@ body {
 }
 .image-box img {
     width: 150%; /* changed from 100% to 200% */
-    position: relative;
+    position: absolute;
     left: -200%;
     transition: transform 0.3s ease;
 }
@@ -190,7 +190,7 @@ nav ul li a:hover {
 }
 /* Rest of your CSS code */
 
-#three-container {
+.three-container {
     width: 80%;
     height: 60vh;
     margin: 0 auto;
