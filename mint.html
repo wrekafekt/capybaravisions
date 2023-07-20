@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Capybara: Visions</title>
+        <link rel="shortcut icon" href="capy.png" width=32px>
+        <link 
+            rel="stylesheet"
+            href="style.css"
+            >
+            <script src="https://unpkg.com/web3@1.8.2/dist/web3.min.js"></script>
+
+            <!-- bottle nft contract -->
+            <script>
+<!-- INSERT CONTRACT HERE -->
+                
+                // Connect to MM
+                connectWallet = async() => {
+                    console.log('you clicked connect')
+                    let connected = false;
+                    try {
+                        accounts = await web3.eth.requestAccounts().then()
+                        connected = true;
+                    } catch(err) {
+                        errorTell(err.message);
+                    }   
+                    if(connected){
+                        var connectbutt = document.getElementById('connect-button');
+                        connectbutt.innerText = 'Connected';
+                        connectbutt.disabled = true;
+                        connectbutt.style.fontSize = "20px";
+
+                        var networkId = await web3.eth.net.getId();
+                        // console.log(networkId);
+                        if (networkId !== 1) {
+                        // Show an error message or take other appropriate action
+                        alert('make sure you're on eth main ya dingus')
+                        }
+                    }
+            
+                //contract interaction
+                //mint nfts
+                mint = async(amt) => {
+                    console.log('you have vision');
+                    document.getElementById("mint-button").style.display = "block";
+                    document.getElementById("mnt-btn").style.display = "none";
+                    document.getElementById("mint-input").style.display = "none";
+
+                    amt = parseInt(document.getElementById("mint-input").value);
+                    console.log(amt);
+                    if(!accounts[0]){
+                        alert('connect your wallet')
+                    }
+                    if(amt > 24){
+                        alert('dayum!')
+                    }
+                    var mintbutt = document.getElementById('mint-button');
+                        mintbutt.innerText = 'Minting';
+                        mintbutt.disabled = true;
+                        
+                    if (friend > 0) {
+                        value = amt * 10000000000000000;
+                        try {
+                            await contract.methods
+                                .mintFriend(amt)
+                                .send({
+                                    from: accounts[0],
+                                    value: value
+                                });
+                        } catch (err) {
+                            errorTell(err.message);
+                        }
+                        mintbutt.innerText = 'MINT YOUR VISION';
+                        mintbutt.disabled = false;
+                    } else {
+                        if (amt < 11) {
+                            value = amt * 12500000000000000;
+                            try {
+                                await bottle.methods
+                                    .mintNew(amt)
+                                    .send({
+                                        from: accounts[0],
+                                        value: value
+                                    })
+                                    .on('transactionHash', function(hash){
+                                        popUp('mint',amt,hash)
+                                    });
+                                    
+                            } catch (err) {
+                                errorTell(err.message);
+                            }
+                            mintbutt.innerText = 'MINT YOUR VISION';
+                            mintbutt.disabled = false;
+                        } else {
+                            value = amt * 11000000000000000;
+                            try {
+                                await bottle.methods
+                                    .mintNew(amt)
+                                    .send({
+                                        from: accounts[0],
+                                        value: value
+                                    });
+                                    alert(`YOUR VISION IS 20/20!`)
+                            } catch (err) {
+                                errorTell(err.message);
+                            }
+                            mintbutt.innerText = 'MINT YOUR VISION';
+                            mintbutt.disabled = false;
+                        }
+                    }
+                }
+               
+            </script>
+      
+
+    </head>
+    <body>
+        <div class="help">
+            <div class="options">
+                <ul>
+                    <li>
+                        <div class="dropdown">
+                        About
+                            <div id="aboutdrop" class="dropitems">
+                                <p>CAPYBARA: VISIONS is an experimental NFT project.</p>
+                                <p>CAPYBARA VISIONS come in a kaleidorscope of varieties that nod to milady derivatives and more</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                        Contracts
+                            <div id="contractdrop" class="dropitems">
+                                <p>CAPYBARAVISIONS NFT Contract <a href="https://etherscan.io/address/0xe0c839d60f15dd0b939e93d9eeab5ecda9affe57#code">view on etherscan</a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            FAQ
+                            <div id="faqdrop" class="dropitems">
+                                <h3>How much are they?</h3>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown close">
+                            x
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="connect">
+                <button id="connect-button" onclick="connectWallet()">Connect</button>
+            </div>
+        </div>
+        <div class="landing">
+        <div class="marquee">
+            <div class="marquee__content">
+                <h1 id="title">capybara:visions</h1>
+                <h1 id="title2">capybara:visions</h1>
+                <h1 id="title3">capybara:visions</h1>
+                <h1 id="title4">capybara:visions</h1>
+                <h1 id="title5">capybara:visions</h1>
+                <h1 id="title6">capybara:visions</h1>
+                <h1 id="title7">capybara:visions</h1>
+                <h1 id="title8">capybara:visions</h1>
+                <h1 id="title9">capybara:visions</h1>
+            </div>
+            <div aria-hidden="true" class="marquee__content">
+                <h1 id="title">capybara:visions</h1>
+                <h1 id="title2">capybara:visions</h1>
+                <h1 id="title3">capybara:visions</h1>
+                <h1 id="title4">capybara:visions</h1>
+                <h1 id="title5">capybara:visions</h1>
+                <h1 id="title6">capybara:visions</h1>
+                <h1 id="title7">capybara:visions</h1>
+                <h1 id="title8">capybara:visions</h1>
+                <h1 id="title9">capybara:visions</h1>
+            </div>
+        </div>
+        
+        <div class="progress-bar-container">
+            <div id="progress-bar"></div>
+            <div id="progress-text"></div>
+          </div>
+        
+            <div id="txinfo" class="popup">
+                <button id="popx" onclick="closePop()">X</button>
+                <div class="popupstuff">
+                    <h3 id="txtitle">tx title</h3>
+                    <p id="txtext">tx info blablablablablablablabalbla</p>
+                    <img src="public/sodapopinski.gif"/>
+                </div>
+            </div>
+            <nav>
+                
+                <ul>
+                    <li>
+                        <button id="mint-button" onclick="phaseTwoMint()">capybara:visions</button>
+                        <input class="mint-input" id="mint-input"/>
+                        <button id="mnt-btn" onclick="mint()">mint you a capy</button>
+                    </li>
+            
+                        <audio controls autoplay loop>
+                            <source src="song.mp3" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </li>
+                </ul>
+              
+ 
+            </nav>
+        </div>
+        <footer>
+            <img src="capy.png"/>
+            <img src="capy.png">
+            <img src="capy.png"/>
+        </footer>
+        
+    </body>
+
+                            <!-- mobile tapping -->
+            <script>
+                // Get all dropdown elements
+                var dropdowns = document.querySelectorAll('.dropdown');
+                // Loop through each dropdown element
+                for (var i = 0; i < dropdowns.length; i++) {
+                // Add a click event listener to toggle the display of the dropdown items
+                dropdowns[i].addEventListener('click', function() {
+                    
+                    let opens = document.querySelectorAll('.dropitemsee');
+                    
+                    for (let i = 0; i < opens.length; i++){
+                        // console.log(opens[i])
+                        opens[i].removeAttribute("class","dropitemsee");
+                        opens[i].setAttribute("class","dropitems")
+                    }
+
+                    let item = this.children[0];
+                    // console.dir(item.attributes[1].nodeValue)
+
+                    item.removeAttribute("class","dropitems");
+                    item.setAttribute("class","dropitemsee");
+                    
+
+                });
+                }
+
+
+                function dropdownDrop(id) {
+                    el = document.getElementById(id);
+                    el.removeAttribute("class","dropitems");
+                    el.setAttribute("class","dropitemsee");
+                }
+                function dropdownCatch(id) {
+                    el = document.getElementById(id);
+                    el.removeAttribute("class","dropitemsee");
+                    el.setAttribute("class","dropitems");
+                }
+            </script>
+</html>
