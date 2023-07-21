@@ -253,3 +253,36 @@ nav ul li a:hover {
     padding: 10px 20px;
   }
 }
+
+/* Add smooth scrolling to your website */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add a parallax effect to your div */
+.parallax {
+  /* The image used */
+  background-image: url("capy.png");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Add a blur effect to your div */
+.blur-effect {
+  backdrop-filter: blur(10px);
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 600px) {
+  .parallax {
+    min-height: 300px;
+  }
+}
+
