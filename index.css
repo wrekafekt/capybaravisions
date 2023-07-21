@@ -231,6 +231,13 @@ nav ul li a:hover {
   transform: scale(1.1);
 }
 
+.middle-image {
+  position: fixed;
+  left: -100%; /* Starts off the left side of the screen */
+  transform: translateX(0); /* Starts with no horizontal offset */
+  transition: transform 1s ease-out; /* Will move smoothly to the right */
+}
+
 /* Modern button styles */
 .modern-button {
   background-color: #000; /* Change this to match your site's color scheme */
