@@ -91,6 +91,8 @@ body {
     transition: transform 0.3s ease;
 }
 
+
+
 /* About box styles */
 .about-box p {
     margin-bottom: 1em;
@@ -232,10 +234,9 @@ nav ul li a:hover {
 }
 
 .middle-image {
-  position: fixed;
-  left: -100%; /* Starts off the left side of the screen */
-  transform: translateX(0); /* Starts with no horizontal offset */
-  transition: transform 1s ease-out; /* Will move smoothly to the right */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Modern button styles */
