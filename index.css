@@ -1,3 +1,4 @@
+/* Global styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,10 +10,10 @@ body {
     background: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    /* Adjusted layout */
     display: block;
 }
 
+/* Container styles */
 .container {
     width: 90%;
     max-width: 3200px;
@@ -22,12 +23,14 @@ body {
     justify-content: center;
 }
 
+/* Logo styles */
 .logo img {
     width: 100%;
     max-width: 620px;
     margin-bottom: 2em;
 }
 
+/* Box styles */
 .welcome-box, .minting-box, .about-box {
     background: #fff;
     padding: 1.5em;
@@ -37,15 +40,45 @@ body {
     text-align: center;
 }
 
+/* Welcome box styles */
+.welcome-box {
+  /* Add a linear gradient background */
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+}
+
+.welcome-box h2, .minting-box h2, .about-box h2 {
+  /* Increase the font size */
+  font-size: 2.5em;
+
+  /* Add a subtle text shadow */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+  }
+  50% {
+    text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000;
+  }
+}
+
+.welcome-text {
+  animation: textGlow 2s infinite;
+}
+
+/* Music player styles */
 .music-player {
     margin-bottom: 2em;
 }
 
+/* Twitter link styles */
 .twitter-link a, .minting-box a {
     color: #1DA1F2;
     text-decoration: none;
 }
 
+/* Image box styles */
 .image-box {
     width: 100%;
     max-width: 1200px;
@@ -58,10 +91,12 @@ body {
     transition: transform 0.3s ease;
 }
 
+/* About box styles */
 .about-box p {
     margin-bottom: 1em;
 }
 
+/* Link styles */
 a {
     transition: color 0.3s ease;
 }
@@ -70,6 +105,7 @@ a:hover {
     color: #0D8ED5;
 }
 
+/* Theme switch styles */
 .theme-switch-wrapper {
     display: flex;
     align-items: center;
@@ -79,8 +115,7 @@ a:hover {
     right: 15px;
 }
 
-/* Rest of your CSS code */
-
+/* Dark theme styles */
 html[data-theme='dark'] {
     background-color: #1f1f1f;
     color: #f1f1f1;
@@ -92,6 +127,7 @@ html[data-theme='dark'] .about-box {
     background-color: #2d2d2d;
 }
 
+/* Navigation styles */
 nav {
   text-align: center;
   padding: 1em;
@@ -121,6 +157,7 @@ nav ul li a:hover {
   color: #1DA1F2;
 }
 
+/* Parallax styles */
 .parallax {
   /* The image used */
   background-image: url("peek.jpg");
@@ -135,6 +172,7 @@ nav ul li a:hover {
   background-size: cover;
 }
 
+/* Three container styles */
 .three-container {
     width: 80%;
     height: 60vh;
@@ -144,6 +182,8 @@ nav ul li a:hover {
     justify-content: center;
     background: transparent;
 }
+
+/* Keyframes */
 @keyframes scaleUp {
   0% {
     transform: scale(1);
@@ -153,36 +193,7 @@ nav ul li a:hover {
   }
 }
 
-.welcome-box {
-  /* Add a linear gradient background */
-  background: linear-gradient(135deg, #6dd5ed, #2193b0);
-
-  /* Add a subtle animation on page load */
-  animation: scaleUp 0.5s ease-in-out;
-}
-
-.welcome-box h2 {
-  /* Increase the font size */
-  font-size: 2.5em;
-
-  /* Add a subtle text shadow */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-/* Add an animation to the welcome text */
-@keyframes textGlow {
-  0%, 100% {
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
-  }
-  50% {
-    text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000;
-  }
-}
-
-.welcome-text {
-  animation: textGlow 2s infinite;
-}
-
-/* Add a hover effect to your links */
+/* Cool link styles */
 .cool-link {
   position: relative;
   text-decoration: none;
@@ -211,13 +222,7 @@ nav ul li a:hover {
   height: 0;
 }
 
-/* Add media queries for responsiveness */
-@media (max-width: 600px) {
-  .welcome-text {
-    font-size: 1.5em;
-  }
-}
-/* Add a hover effect to your images */
+/* Cool image styles */
 .cool-image {
   transition: transform 0.2s;
 }
@@ -226,7 +231,7 @@ nav ul li a:hover {
   transform: scale(1.1);
 }
 
-/* Add a modern effect to your buttons */
+/* Modern button styles */
 .modern-button {
   background-color: #000; /* Change this to match your site's color scheme */
   color: #fff; /* Change this to match your site's color scheme */
@@ -246,43 +251,21 @@ nav ul li a:hover {
   color: #000; /* Change this to match your site's color scheme */
 }
 
-/* Add media queries for responsiveness */
-@media (max-width: 600px) {
-  .modern-button {
-    font-size: 12px;
-    padding: 10px 20px;
-  }
-}
-
-/* Add smooth scrolling to your website */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Add a parallax effect to your div */
-.parallax {
-  /* The image used */
-  background-image: url("capy.png");
-
-  /* Set a specific height */
-  min-height: 500px; 
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* Add a blur effect to your div */
+/* Blur effect styles */
 .blur-effect {
   backdrop-filter: blur(10px);
 }
 
-/* Add media queries for responsiveness */
+/* Media queries */
 @media (max-width: 600px) {
+  .welcome-text {
+    font-size: 1.5em;
+  }
+  .modern-button {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
   .parallax {
     min-height: 300px;
   }
 }
-
