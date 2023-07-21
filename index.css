@@ -217,3 +217,39 @@ nav ul li a:hover {
     font-size: 1.5em;
   }
 }
+/* Add a hover effect to your images */
+.cool-image {
+  transition: transform 0.2s;
+}
+
+.cool-image:hover {
+  transform: scale(1.1);
+}
+
+/* Add a modern effect to your buttons */
+.modern-button {
+  background-color: #000; /* Change this to match your site's color scheme */
+  color: #fff; /* Change this to match your site's color scheme */
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.modern-button:hover {
+  background-color: #555; /* Change this to match your site's color scheme */
+  color: #000; /* Change this to match your site's color scheme */
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 600px) {
+  .modern-button {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+}
