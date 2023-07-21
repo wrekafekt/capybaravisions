@@ -168,4 +168,52 @@ nav ul li a:hover {
   /* Add a subtle text shadow */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+/* Add an animation to the welcome text */
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+  }
+  50% {
+    text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000;
+  }
+}
 
+.welcome-text {
+  animation: textGlow 2s infinite;
+}
+
+/* Add a hover effect to your links */
+.cool-link {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  overflow: hidden;
+  transition: color 0.2s ease-in-out;
+}
+
+.cool-link:hover {
+  color: #fff;
+}
+
+.cool-link:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: -1;
+  transition: all 0.2s ease-in-out;
+}
+
+.cool-link:hover:before {
+  height: 0;
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 600px) {
+  .welcome-text {
+    font-size: 1.5em;
+  }
+}
