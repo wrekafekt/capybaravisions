@@ -56,15 +56,15 @@ body {
 
 @keyframes textGlow {
   0%, 100% {
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+    text-shadow: 0 0 10px #7fff00, 0 0 20px #7fff00, 0 0 30px #7fff00, 0 0 40px #7fff00;
   }
   50% {
-    text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000;
+    text-shadow: 0 0 20px #7fff00, 0 0 30px #7fff00, 0 0 40px #7fff00, 0 0 50px #7fff00, 0 0 60px #7fff00;
   }
 }
 
 .welcome-text {
-  animation: textGlow 2s infinite;
+  animation: textGlow 0.5s infinite;
 }
 
 /* Music player styles */
