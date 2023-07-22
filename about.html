@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+        body {
+          body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px; /* Modify this value to adjust the size of the fade area */
+    background: linear-gradient(to bottom, black 0%, transparent 100%);
+    pointer-events: none; /* Let mouse events pass through */
+}
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 300px;
+            height: 100vh;
+            overflow: hidden;
+            background-color: black;
+            color: purple;
+            font-size: 2rem;
+            font-family: 'Berkshire Swash', sans-serif;
+        }
+
+        .crawl {
+            position: relative;
+            top: 3000px;
+            animation: crawl 450s linear;
+            transform-origin: 50% 100%;
+            transform: rotateX(20deg) translateZ(-250px);
+          
+        }
+
+        @keyframes crawl {
+            0% { top: 0px; }
+            100% { top: -6000px; }
+        }
+      .textContainer {
+    max-width: 800px;
+    margin: auto;
+}
+      
+    </style>
+
+    <script>
+        let i = 0;
+        let j = 0;
+let lore = [
+    'In the sprawling metaverse, an enigmatic realm pulses with vibrant life and eclectic charm: Capybara: Visions.',
+    'Here, Capybaras, the once simple, unassuming creatures of Earth, have evolved beyond their humble origins, shaped by the hands of a generative AI known as the CapybaR.AI.',
+    'This advanced AI algorithm molds a Capybaras into wondrous embodiments of landscapes, patterns, cultures, and more.',
+    'Mountains, forests, cityscapes; geometric patterns pulsating with the rhythm of the cosmos; references to various cultures both terrestrial and digital - all these and more are reflected in the capybara bodies.',
+    'Capybara: Visions pays homage to the rich tapestry of internet culture, with every capybara resonating with the energy of electronic dance music (EDM) and bearing traces of successful NFT projects.',
+    'These elements are interwoven into their beings, symbolic of the universal language of the metaverse.',
+    'Yet, each capybara is more than just a visual spectacle.',
+    'They are explorers, cosmic voyagers journeying across the multiverse, uncovering secrets and knowledge.',
+    'Collectors, on their part, are more than just owners of unique NFTs.',
+    'They are active participants in this exploration, piecing together the diverse visions of the capybaras to decipher the grand design hidden within the Capybara: Visions.',
+    'Every Capybara: Visions NFT is a beacon of diversity, a testament to the beauty of complexity, and a mysterious riddle waiting to be solved.',
+    'The more capybaras one collects, the deeper their understanding of the multiverse becomes.',
+    'Welcome to Capybara: Visions.',
+    'Here, every capybara is a unique vision of the cosmos, a piece of a grander puzzle.',
+    'Embark on this journey, unravel the mysteries, and immerse yourself in the boundless wonders of Capybara: Visions.'
+];
+  
+
+        function typeSentence() {
+            if (j < lore[i].length) {
+                document.getElementById(`sentence${i}`).innerHTML += lore[i].charAt(j);
+                j++;
+                let rand = Math.floor(Math.random() * (140 - 30)) + 30; // Generating a random time delay to simulate typing
+                setTimeout(typeSentence, rand);
+            } else if (i < lore.length - 1) {
+                i++;
+                j = 0;
+                typeSentence();
+            }
+        }
+    </script>
+</head>
+
+<body onload="typeSentence()">
+    <div class="crawl">
+      <div class="textContainer">
+<p id="sentence0"></p>
+<p id="sentence1"></p>
+<p id="sentence2"></p>
+<p id="sentence3"></p>
+<p id="sentence4"></p>
+<p id="sentence5"></p>
+<p id="sentence6"></p>
+<p id="sentence7"></p>
+<p id="sentence8"></p>
+<p id="sentence9"></p>
+<p id="sentence10"></p>
+<p id="sentence11"></p>
+<p id="sentence12"></p>
+<p id="sentence13"></p>
+<p id="sentence14"></p>
+    </div>
+</body>
+</html>
