@@ -43,7 +43,7 @@ body {
 /* Welcome box styles */
 .welcome-box {
   /* Add a linear gradient background */
-  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+  background: linear-gradient(135deg, #2193b0);
 }
 
 .welcome-box h2, .minting-box h2, .about-box h2 {
