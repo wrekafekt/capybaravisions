@@ -1,0 +1,1095 @@
+<!--------------------------------
+
+
+        SNOOPING –– code by jiko
+        
+        RULES
+             → Read this thoroughly please, and maybe leave a small comment saying that you've read it? :'3  thank youu
+               [ https://toyhou.se/~bulletins/114207 ]
+           
+        TIPPY TIPS
+             → this layout uses both bootstrap and custom colours.  If you want everything to be custom coloured, I'm afraid you'll have to do that yourself/get someone else to do that!
+             → each section has their own notes/help guide for users!  If you are careful, it should work out all fine!
+               (accent colour guide are below as well)
+               
+             → !! use ctrl+f whenever possible!  this will save your life !!
+             
+             → change [ https://file.toyhou.se/images/7745356_UbxFaTbtSE8Egg6.png ] 
+               to your desired profile picture (ideally, the same URL for easy's sake)
+               by using ctrl+f (there's six of these!)
+
+
+--------------------------------->
+<div class="mx-auto" style="font-size:13px; max-width:1200px">
+<div class="row no-gutters">
+<div class="col-lg-12">
+<!-- ------------------------------------
+
+
+
+                (0) WINDOW | BACKGROUND
+                
+                → put IMG URL inside brackets!
+                → if the IMG is seamless, remove [ background-repeat: no-repeat ]
+                  and change [ cover ] to any size (px)
+
+
+
+------------------------------------- -->  
+<div class="card border-0 rounded-0" style="height: 650px">
+<div class="h-100" style="
+    
+    background-image: url(https://images.unsplash.com/photo-1559324945-6dd11470014c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;">
+<!-- ------------------------------------
+
+
+                (0.1) FAKE "NAV" BAR
+                
+                → no practical use
+
+
+------------------------------------- -->
+<div class="card rounded-0 border-0 p-1 px-3 text-white hidden-xs-down"
+     style="background: rgba(0,0,0,0.3)">
+<div class="d-flex justify-content-between">
+
+        <span>
+            <i class="fab fa-apple"></i>
+            <span class="mx-2" style="font-weight:500">Chrome</span>
+            <span class="mx-1">File</span>
+            <span class="mx-1">Edit</span>
+            <span class="mx-1">View</span>
+            <span class="mx-1">History</span>
+            <span class="mx-1">Help</span>
+        </span>
+
+
+        <span>
+            <i class="fab fa-bluetooth-b"></i>
+            <i class="mx-1 fad fa-wifi-2"></i>
+            <i class="mx-1 fas fa-volume-down"></i>
+            <span class="mx-2">Tue 3:04 pm</span>
+            <i class="mx-1 fas fa-search"></i>
+            <i class="mr-2 fas fa-list-ul"></i>
+        </span>
+
+</div>
+</div>
+<!-- ------------------------------------
+
+
+                 (0.2) BROWSING TABS
+
+
+------------------------------------- -->
+<div class="row no-gutters mt-3 p-2">
+<div class="col-lg-12 p-2">
+<div class="card" style="min-height: 550px">
+<!-- ------------------------------------
+
+
+                 (0.3) NAV-TABS
+                 
+                 → i do NOT recommand adding more tabs or
+                   changing the tabs unless you are 100% confident!
+
+
+------------------------------------- -->
+<div class="card-header bg-faded">
+<ul class="nav nav-tabs card-header-tabs nav-justified" style="letter-spacing:1px;">
+
+
+    <!-- [ NEW TAB ] -->
+    <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#newtab">
+        <span class="justify-content-between rounded-0">
+              <span class="hidden-md-down w-50 text-truncate">New Tab</span>
+              <span class="hidden-lg-up"><i class="fas fa-browser"></i></span>
+              <span><i class="fal fa-times"></i></span>
+        </span>
+        </a>
+    </li>
+
+
+    <!-- [ MESSENGERS ] -->
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#messages">
+        <span class="justify-content-between rounded-0">
+              <span class="hidden-md-down w-50 text-truncate">Messages</span>
+              <span class="hidden-lg-up"><i class="fas fa-comment"></i></span>
+              <span><i class="fal fa-times"></i></span>
+        </span>
+        </a>
+    </li>
+
+
+    <!-- [ DIARY | BACKKSTORY ] -->
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#diary">
+        <span class="justify-content-between rounded-0">
+              <span class="hidden-md-down w-50 text-truncate">Diary</span>
+              <span class="hidden-lg-up"><i class="fas fa-books"></i></span>
+              <span><i class="fal fa-times"></i></span>
+        </span>
+        </a>
+    </li>
+
+
+    <!-- [ ONLINE QUIZ | PERSONALITY ] -->
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#quiz">
+        <span class="justify-content-between rounded-0">
+              <span class="hidden-md-down w-50 text-truncate">Online Quiz</span>
+              <span class="hidden-lg-up"><i class="fas fa-question"></i></span>
+              <span><i class="fal fa-times"></i></span>
+        </span>
+        </a>
+    </li>
+
+
+    <!-- [ RESUME ] -->
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#resume">
+        <span class="justify-content-between rounded-0">
+              <span class="hidden-md-down w-50 text-truncate">Resume</span>
+              <span class="hidden-lg-up"><i class="fas fa-file"></i></span>
+              <span><i class="fal fa-times"></i></span>
+        </span>
+        </a>
+    </li>
+
+
+</ul>
+</div>
+<!-- ------------------------------------
+
+
+                 WINDOWS | CONTENT
+
+
+------------------------------------- -->
+<div class="tab-content">
+<!-- ------------------------------------
+
+                 (1) NEW TAB
+                 –– inspired by a Chrome Extention and the lockscreen of a phone haha
+                 
+                 → no actual use
+                 → put IMG URL inside brackets!
+                 → give proper credits and linkage to the background on CREDITS
+
+------------------------------------- -->
+<div class="tab-pane active" id="newtab">
+    
+    
+    <!--  SEARCH BAR  ------------------------------------- -->
+    <div class="row no-gutters m-2">
+
+        <div class="col-1 justify-content-between p-2 hidden-sm-down">
+            <span><i class="fas fa-arrow-left"></i></span>
+            <span><i class="fas fa-arrow-right" style="filter: opacity(40%)"></i></span>
+            <span><i class="fas fa-redo"></i></span>
+        </div>
+
+        <div class="col-10 justify-content-between badge-pill bg-faded p-2 mx-auto">
+            <span class="px-1 w-100" style="letter-spacing: 1px">
+                <i class="fas fa-lock px-2"></i><span style="filter: opacity(60%)">
+                  
+                  Search Google</span>
+                 
+            </span>
+            <span class="mr-2"><i class="far fa-star"></i></span>
+        </div>
+
+        <div class="col-1 justify-content-between p-2 hidden-sm-down">
+            <span><i class="fas fa-list-music"></i></span>
+            <span><img src="https://file.toyhou.se/images/7745356_UbxFaTbtSE8Egg6.png" class="fr-rounded bg-faded" style="max-width:20px; max-height:20px;"></span>
+            <span><i class="fas fa-ellipsis-v"></i></span>
+        </div>
+
+    </div>
+
+
+
+    <!--  CONTENT  ------------------------------------- -->
+    <div class="card border-0 border-0" style="border-top-right-radius:0px; border-top-left-radius:0px; min-height:449px;
+    
+        background-image: url(https://images.unsplash.com/photo-1514810771018-276192729582?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+        
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;">
+
+
+        <div class="text-white p-1">
+            <h1 class="display-1 text-center" style="margin-top: 45px;">15:04</h1>
+            <div class="text-center" style="margin-top: -7px">Tuesday, 7 April</div>
+            <h1 class="display-4 text-center" style="margin-top: 75px;">Welcome back, USER.</h1>
+            <h1 class="display-4 text-center" style="margin-top: 25px;">You have 0 new notifications.</h1>
+        </div>
+
+
+    </div>
+
+
+
+    <!--  CREDITS FOR TAB BACKGROUND  ------------------------------------- -->
+    <a class="text-white" href="https://unsplash.com/photos/2s3fI3M1lO0"
+    style="font-size:12px; position:absolute; bottom:.5rem; left:.75rem; z-index:100; text-decoration:none!important;">
+
+        Marek Szturc / Unsplash <i class="far fa-heart"></i>
+    
+    </a>
+</div>
+<!-- ------------------------------------
+
+                 (2) MESSENGES
+                 –– everybody's favourite mechanism, ey?
+                    inspired by iMessage
+                 
+                 → bg-secondary = reciever
+                 → bg-primary = sender (you)
+                 → you may change these colours by CC or BS, however, keep in
+                   mind of the colours on other site themes since the text
+                   is white!
+
+------------------------------------- -->
+<div class="tab-pane" id="messages">
+
+
+    <!--  SEARCH BAR  ------------------------------------- -->
+    <div class="row no-gutters m-2">
+        
+        <div class="col-1 justify-content-between p-2 hidden-sm-down">
+            <span><i class="fas fa-arrow-left"></i></span>
+            <span><i class="fas fa-arrow-right" style="filter: opacity(40%)"></i></span>
+            <span><i class="fas fa-redo"></i></span>
+        </div>
+        
+        <div class="col-10 justify-content-between badge-pill bg-faded p-2 mx-auto">
+            <span class="px-1 w-100" style="letter-spacing: 1px"><i class="fas fa-lock px-2"></i>
+            
+                imessa.ge<span style="filter: opacity(60%)">/en/personal</span>
+            
+            </span>
+            <span class="mr-2"><i class="fas fa-star"></i></span>
+        </div>
+        
+        <div class="col-1 justify-content-between p-2 hidden-sm-down">
+            <span><i class="fas fa-list-music"></i></span>
+            <span><img src="https://file.toyhou.se/images/7745356_UbxFaTbtSE8Egg6.png" class="fr-rounded bg-faded" style="max-width:20px; max-height:20px;"></span>
+            <span><i class="fas fa-ellipsis-v"></i></span>
+        </div>
+        
+    </div>
+
+
+
+    <!--  CONTENT  ------------------------------------- -->
+    <div class="card rounded-0 border-0" style="min-height:449px;">
+    <div class="row no-gutters">
+
+
+
+        <!---  PREVIEW CONTACTS  ------------------------------------- -->
+        <!--  ONLY FOR SHOW  -->
+        <div class="col-3 hidden-md-down">
+        <div class="card h-100" style="overflow:auto;">
+        <div class="card p-2 rounded-0 border-0">
+
+            <div class="card border-0 bg-faded p-1 px-2" style="font-size:11px; font-weight: 600">
+                <span class="px-1 pull-left"><i class="fas fa-search pr-1"></i> Search...</span>
+            </div>
+
+        </div><hr class="mx-auto my-0 w-100">
+        
+        
+            <!-- [ FIRST CONTACT ] -->
+            <!-- leave the preview message short, one sentence at the least! -->
+            <div class="row no-gutters p-2">
+                <div class="col-3 hidden-md-down">
+                    <img src="https://file.toyhou.se/images/7745356_UbxFaTbtSE8Egg6.png"
+                    class="fr-rounded bg-faded" style="width: 50px; height: 50px;">
+                </div>
+                    
+                <div class="col-lg-9 p-1">
+                    <div class="d-flex justify-content-between">
+                        <span class="w-100 text-truncate">fakeuser@thmail.com</span>
+                        <span class="pl-1">7/4/20</span>
+                    </div><span style="filter: opacity(50%)">what the HECK bro</span>
+                </div>
+            </div><hr class="mx-auto my-0 w-100">
+        
+        
+            <!-- [ SECOND CONTACT ] -->
+            <div class="row no-gutters p-2">
+                <div class="col-3 hidden-md-down">
+                    <img src="https://file.toyhou.se/images/7745356_UbxFaTbtSE8Egg6.png"
+                    class="fr-rounded bg-faded" style="width: 50px; height: 50px;">
+                </div>
+            
+                <div class="col-lg-9 p-1">
+                    <div class="d-flex justify-content-between">
+                        <span class="w-100 text-truncate">0XXX-X45-86X</span>
+                        <span class="pl-1">1/2/16</span>
+                    </div><span style="filter: opacity(50%)">yea lol</span>
+                </div>
+            </div><hr class="mx-auto my-0 w-100">
+
+
+
+        <!-- [ add more above THIS line! ] -->
+        <!-- [ max is about 6 contacts altogether ] -->
+        </div>
+        </div>
+
+
+
+        <!---  MESSAGES  ------------------------------------- -->
+        <div class="col-lg-9">
+            
+            
+            <!-------- [ MESSAGE HEADING ]------ -->
+            <div class="card rounded-0 border-0 px-3 pt-4 pb-2">
+            <div class="justify-content-between">
+                <span>
+                    <span style="filter: opacity(50%)">To:</span>
+                    <span class="mx-2" style="letter-spacing: 0.5px;">
+                            
+                            fakeuser@thmail.com
+                            
+                    </span>
+                </span>
+                <span class="text-primary">Details</span>
+            </div>
+            </div>
+            
+            
+            <!-------- [ MESSAGES CONTENT ] ------->
+            <div class="card-block table-responsive bg-faded"
+            style="max-height: 320px; letter-spacing: 0.5px; font-size: 0.8rem">
+                
+                
+                <!---- [ DATE ] ---->
+                <div class="text-center mb-3">
+                    <div style="letter-spacing: 1px; filter: opacity(50%)">
+                        <b>Text Message</b><br>
+                        Mon, 2 Mar,12:31 pm
+                    </div>
+                </div>
+                
+                
+                <!---- [ RECIEVER ] ---->
+                <div class="text-left mb-2">
+                     <div class="py-1 px-2 d-inline-block text-left bg-secondary text-white" style="max-width:75%; border-radius:13px;">
+                         This is a text from the reciever!
+                    </div>
+                </div>
+                
+                
+                <!---- [ SENDER ] ---->
+                <div class="text-right mb-2">
+                    <div class="py-1 px-2 d-inline-block text-left bg-primary text-white" style="max-width:75%; border-radius:13px;">
+                        This is a text from the sender/user!
+                    </div>
+                </div>
+                
+                
+                <!---- [ RECIEVER ] ---->
+                <div class="text-left mb-2">
+                    <div class="py-1 px-2 d-inline-block text-left bg-secondary text-white " style="max-width:75%; border-radius:13px;">
+                        This is a text with paragraph breaks.
+                        
+                        <br><br>
+                        
+                        Make sure to use two!  But one is okay, depending in the texter's aesthetic.
+                    </div>
+                </div>
+                
+                
+                <!---- [ SENDER ] ---->
+                <div class="text-right mb-2">
+                    <div class="py-1 px-2 d-inline-block text-left bg-primary text-white" style="max-width:75%; border-radius:13px;">
+                        Or you can do it
+                    </div>
+                </div>
+                
+                
+                <!---- [ SENDER ] ---->
+                <div class="text-right mb-2">
+                    <div class="py-1 px-2 d-inline-block text-left bg-primary text-white" style="max-width:75%; border-radius:13px;">
+                        like this
+                    </div>
+                </div>
+                
+                
+                <!---- [ SENDER ] ---->
+                <div class="text-right mb-2">
+                    <div class="py-1 px-2 d-inline-block text-left bg-primary text-white" style="max-width:75%; border-radius:13px;">
+                        bc laziness irl is okay too
+                    </div>
+                </div>
+                
+                
+                <!---- [ DATE ] ---->
+                <div class="text-center my-2">
+                    <div style="letter-spacing: 1px; filter: opacity(50%)">
+                        16/2/20, 4:41 pm
+                    </div>
+                </div>
+                
+                
+                <!---- [ RECIEVER ] ---->
+                <div class="text-left mb-2">
+                    <div class="py-1 px-2 d-inline-block text-left bg-secondary text-white" style="max-width:75%; border-radius:13px;">
+                        Here's an image:
+                        
+                        <br><br>
+                        
+                        <img src="https://i.pinimg.com/originals/62/72/44/62724454e838529943f3f2ea4008db6a.png" style="max-height:300px">
+                    </div>
+                </div>
+                
+                
+                <!---- [ SENDER ] ---->
+                <div class="text-right mb-2">
+                    <div class="py-1 px-2 d-inline-block text-left bg-primary text-white" style="max-width:75%; border-radius:13px;">
+                        Now here's a clickable link (putting the full link may break on mobile):
+                        
+                        <br><br>
+                        
+                        <a class="text-white" href="https://www.youtube.com/watch?v=1fXYDkpfHsk">SONG</a>
+                    </div>
+                </div>
+                
+                
+                <!-- [ LAST READ ] -->
+                <div class="text-right">
+                    <div style="letter-spacing: 1px; filter: opacity(50%); margin-top:-5px">
+                        Read 16/2/20
+                    </div>
+                </div>
+                
+                
+                <!---- [ RECIEVER ] ---->
+                <div class="text-left mb-2">
+                    <div class="py-1 px-2 d-inline-block text-left bg-secondary text-white" style="max-width:75%; border-radius:13px;">
+                        what the HECK bro
+                    </div>
+                </div>
+            
+            
+            <!-- add/delete above THIS line! -->
+            </div>
+            
+            
+            <!-------- [ TEXT BOX ] ------->
+            <div class="card-block p-3" style="height: 78px;">
+                <div class="card bg-faded p-2" style="border-radius: 30px;">
+                     <span class="justify-content-between px-1" style="filter: opacity(50%)">
+                         <span>iMessage</span>
+                         <span><i class="fas fa-smile fa-lg"></i></span>
+                    </span>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    </div>
+</div>
+<!-- ------------------------------------
+
+                 (3) DIARY/BACKSTORY
+                 –– slightly modeled off of tumblr but honestly,
+                    any blogging platform fits too lmao
+                 
+                 → buttons are non-interactable
+                 → put IMG URL inside brackets!
+                 
+                 → if the IMG is NOT seamless, change
+                   [ background-repeat: repeat ] to [ background-repeat: no-repeat ] 
+                   and change [ 600px ] to [ cover ]
+                 
+                 
+                 COLOUR GUIDE
+                 –– this uses BOTH hex codes and RGBA.
+                 
+                 → accent 1     : rgba(148,189,200,1)
+                 → accent 2     : rgba(0,0,0,0)
+                 → hr           : rgba(0,0,0,.1)
+                 
+                 → text         : #4e4e4e
+                 → text (muted) : #8d8d8d
+                 → background   : #ffffff
+
+------------------------------------- -->
+<div class="tab-pane" id="diary">
+
+
+    <!--  SEARCH BAR  ------------------------------------- -->
+    <div class="row no-gutters m-2">
+        
+        <div class="col-1 justify-content-between p-2 hidden-sm-down">
+            <span><i class="fas fa-arrow-left"></i></span>
+            <span><i class="fas fa-arrow-right" style="filter: opacity(40%)"></i></span>
+            <span><i class="fas fa-redo"></i></span>
+        </div>
+        
+        <div class="col-10 justify-content-between badge-pill bg-faded p-2 mx-auto">
+            <span class="px-1 w-100" style="letter-spacing: 1px"><i class="fas fa-lock px-2"></i>
+            
+                onlinediary.com<span style="filter: opacity(60%)">/myworks</span>
+            
+            </span>
+            <span class="mr-2"><i class="fas fa-star"></i></span>
+        </div>
+        
+        <div class="col-1 justify-content-between p-2 hidden-sm-down">
+            <span><i class="fas fa-list-music"></i></span>
+            <span><img src="https://file.toyhou.se/images/7745356_UbxFaTbtSE8Egg6.png" class="fr-rounded bg-faded" style="max-width:20px; max-height:20px;"></span>
+            <span><i class="fas fa-ellipsis-v"></i></span>
+        </div>
+    
+    </div>
+
+
+
+    <!--  DIARY  ------------------------------------- -->
+    <div style="min-height:449px;
+        
+    background-image: url(https://f2.toyhou.se/file/f2-toyhou-se/images/18493463_E7zWDYoSCMyMjEH.png);
+    
+    background-size: 600px;
+    background-position: center;
+    background-repeat: repeat;">
+        
+    <div class="pt-2 px-4" style="color:#4e4e4e">
+        <div class="p-2">
+            
+            <i class="fas fa-search px-1"></i>
+            <i class="fas fa-home px-1"></i>
+            <i class="fas fa-folder px-1"></i>
+            <i class="fas fa-upload px-1"></i>
+            
+        </div>
+    </div>
+    <div class="container rounded-0 border-0 col-lg-7" style="overflow:auto; max-height:400px;">
+
+
+        <!---  ENTRY ONE  ------------------------------------- -->
+        <div style="margin-bottom:55px">
+            
+            
+            <!----- [ TITLE ] ----->
+            <div class="pb-3">
+                <div class="text-white p-3" style="border-radius:18px;
+                background: linear-gradient(90deg, rgba(148,189,200,1) 0%, rgba(148,189,200,1) 15%, rgba(0,0,0,0) 100%);">
+                    <span class="text-uppercase"
+                    style="font-size:14px; letter-spacing:5px">Entry One</span>
+                </div>
+            </div>
+            
+            
+            <!----- [ CONTENT ] ----->
+            <div class="p-3" style="border-radius:18px; background-color:#ffffff">
+            <div class="text-right p-1 pb-3" style="color:#8d8d8d">15/06/2016 <i class="fas fa-pen pl-3"></i></div>
+            <div class="px-3" style="color:#4e4e4e">
+                
+                <i class="fas fa-seedling fa-2x pr-2 fa-pull-left"></i>
+                <p>Hello, new diary!  I'm feeling really good about this year, got into my university and got a new car!!! Passed my P's and everything</p>
+                
+                <p>Mmmmm dunno what to add here lol XD.  Hopefully I won't forget about this.  It's probably better than a physical diary.  Can you believe the audacity SOME people have when they snoop around in your private stuff?  Honesty!</p>
+                
+                <p>GTG!  My roomate's making pasta tonite! >:D</p>
+                
+            </div><hr style="border-color: rgba(0,0,0,.1)">
+            
+            
+            <!----- [ FEELING ] ----->
+            <div class="text-right" style="color:#8d8d8d">
+                <span><i>
+                    
+                    Feeling: joyful!
+                    
+                </i></span>
+            </div>
+            </div>
+        </div>
+
+
+
+        <!---  ENTRY TWO  ------------------------------------- -->
+        <div style="margin-bottom:55px">
+            
+            
+            <!----- [ TITLE ] ----->
+            <div class="pb-3">
+                <div class="text-white p-3" style="border-radius:18px;
+                background: linear-gradient(90deg, rgba(148,189,200,1) 0%, rgba(148,189,200,1) 15%, rgba(0,0,0,0) 100%);">
+                    <span class="text-uppercase"
+                    style="font-size:14px; letter-spacing:5px">Entry Two</span>
+                </div>
+            </div>
+            
+            
+            <!----- [ CONTENT ] ----->
+            <div class="p-3" style="border-radius:18px; background-color:#ffffff">
+            <div class="text-right p-1 pb-3" style="color:#8d8d8d">02/09/2018 <i class="fas fa-pen pl-3"></i></div>
+            <div class="px-3" style="color:#4e4e4e">
+                
+                <i class="fas fa-seedling fa-2x pr-2 fa-pull-left"></i>
+                <p>oh my god i forgot about this ughsbdsb</p>
+                
+            </div><hr style="border-color: rgba(0,0,0,.1)">
+            
+            
+            <!----- [ FEELING ] ----->
+            <div class="text-right" style="color:#8d8d8d">
+                <span><i>
+                    
+                    Feeling: p trashy ayyyye
+                    
+                </i></span>
+            </div>
+            </div>
+        </div>
+
+
+
+         <!---  ENTRY THREE  ------------------------------------- -->
+        <div style="margin-bottom:55px">
+            
+            
+            <!----- [ TITLE ] ----->
+            <div class="pb-3">
+                <div class="text-white p-3" style="border-radius:18px;
+                background: linear-gradient(90deg, rgba(148,189,200,1) 0%, rgba(148,189,200,1) 15%, rgba(0,0,0,0) 100%);">
+                    <span class="text-uppercase"
+                    style="font-size:14px; letter-spacing:5px">Entry Three</span>
+                </div>
+            </div>
+            
+            
+            <!----- [ CONTENT ] ----->
+            <div class="p-3" style="border-radius:18px; background-color:#ffffff">
+            <div class="text-right p-1 pb-3" style="color:#8d8d8d">02/09/2018 <i class="fas fa-pen pl-3"></i></div>
+            <div class="px-3" style="color:#4e4e4e">
+                
+                <i class="fas fa-seedling fa-2x pr-2 fa-pull-left"></i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ipsum sit amet mi ultrices malesuada. Aenean eget lacinia lacus. Maecenas ultrices magna suscipit libero malesuada, eu condimentum purus tempus. Sed urna velit, hendrerit eu ipsum quis, rhoncus malesuada tellus. Integer quis velit ac justo tempor congue. Sed pulvinar eros nec ultricies fringilla.</p>
+                
+                <p>These can be as long or as short as you want.</p>
+                
+            </div><hr style="border-color: rgba(0,0,0,.1)">
+            
+            
+            <!----- [ FEELING ] ----->
+            <div class="text-right" style="color:#8d8d8d">
+                <span><i>
+                    
+                    Feeling: content
+                    
+                </i></span>
+            </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    </div>
+</div>
+<!-- ------------------------------------
+
+                 (4) ONLINE QUIZ/PERSONALITY
+                 –– very much inspired by the MBTI personality test haha 
+                 
+                 → nav bar is non-interactable
+                 → both process bars must equate to 100%
+                 → personality traits can be edited to whatever's extent!
+                 
+                 → whichever option has the higher percentage,
+                   it will have the [ accent 1 colour ], leaving
+                   the other side [ empty bar colour ]. 
+                 
+                 
+                 COLOUR GUIDE
+                 –– this uses ONLY hex codes
+                 
+                 → accent 1                : #a1b9c4
+                 
+                 → text                    : #333333
+                 → top nav text            : #767676
+                 → main background         : #fbfbfb
+                 → top nav bg + empty bar  : #f0f0f0
+
+------------------------------------- -->
+<div class="tab-pane" id="quiz">
+
+
+    <!--  SEARCH BAR  ------------------------------------- -->
+    <div class="row no-gutters m-2">
+        
+        <div class="col-1 justify-content-between p-2 hidden-sm-down">
+            <span><i class="fas fa-arrow-left"></i></span>
+            <span><i class="fas fa-arrow-right" style="filter: opacity(40%)"></i></span>
+            <span><i class="fas fa-redo"></i></span>
+        </div>
+        
+        <div class="col-10 justify-content-between badge-pill bg-faded p-2 mx-auto">
+            <span class="px-1 w-100" style="letter-spacing: 1px"><i class="fas fa-lock px-2"></i>yourqu.iz<span style="filter: opacity(60%)">/results</span></span>
+            <span class="mr-2"><i class="far fa-star"></i></span>
+        </div>
+        
+        <div class="col-1 justify-content-between p-2 hidden-sm-down">
+            <span><i class="fas fa-list-music"></i></span>
+            <span><img src="https://file.toyhou.se/images/7745356_UbxFaTbtSE8Egg6.png" class="fr-rounded bg-faded" style="max-width:20px; max-height:20px;"></span>
+            <span><i class="fas fa-ellipsis-v"></i></span>
+        </div>
+    </div>
+
+
+
+    <!--  QUIZ  ------------------------------------- -->
+    <div class="card rounded-0 border-0" style="overflow:auto; max-height:449px;">
+    <div class="h-100" style="background-color:#fbfbfb;">
+        
+        <div class="py-2 px-4" style="background-color: #f0f0f0">
+        <div class="p-2 justify-content-between" style="color:#767676">
+            
+            <span>
+                <span class="font-weight-bold" style="letter-spacing:2px">
+                    <span style="color:#a1b9c4">Y</span>OUR<span style="color:#a1b9c4">Q</span>UIZ
+                </span>
+            </span>
+            
+            <span class="hidden-md-down">
+                <i class="fas fa-search px-1"></i>
+                <span class="px-2">Personality Quizzes</span>
+                <span class="px-2">Community</span>
+                <span class="px-2">Make Your Own!</span>
+            </span>
+            
+            <span>
+                <span class="badge badge-pill" style="background-color:#a1b9c4; letter-spacing:1px; font-size:12px; line-height:18px;">
+                    LOG IN
+                </span>
+            </span>
+            
+        </div>
+        </div>
+    
+    
+    
+    <!---  REVEAL THE PERSONALITY  ------------------------------------- -->
+    <div class="container rounded-0 border-0 col-lg-6 col-9">
+    <div class="text-center pt-5 py-4" style="color:#333333">
+        
+        <h1>Thank you for taking our quiz! 
+        
+            <span class="fr-emoticon fr-deletable fr-emoticon-img" style="background: url(https://cdnjs.cloudflare.com/ajax/libs/emojione/2.0.1/assets/svg/2764.svg);"></span>
+        
+        </h1><br>
+        <p>Based on your answers, you are:</p>
+        
+    </div>
+    <div class="mx-auto pt-3" style="color:#333333">
+        
+        
+        
+        <div class="py-3">
+            <div class="justify-content-between">
+                <span class="text-left">20%<br>Extroverted</span>
+                <span class="text-right">80%<br>Introverted</span>
+            </div>
+            <div class="progress my-1" style="height:8px">
+                <div class="progress-bar" style="width:20%; background-color:#f0f0f0;"></div>
+                <div class="progress-bar" style="width:80%; background-color:#a1b9c4;"><br></div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="py-3">
+            <div class="justify-content-between">
+                <span class="text-left">40%<br>Intuitive</span>
+                <span class="text-right">60%<br>Observant</span>
+            </div>
+            <div class="progress my-1" style="height:8px">
+                <div class="progress-bar" style="width:40%; background-color:#f0f0f0;"></div>
+                <div class="progress-bar" style="width:60%; background-color:#a1b9c4;"><br></div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="py-3">
+            <div class="justify-content-between">
+                <span class="text-left">61%<br>Thinking</span>
+                <span class="text-right">39%<br>Feeling</span>
+            </div>
+            <div class="progress my-1" style="height:8px">
+                <div class="progress-bar" style="width:61%; background-color:#a1b9c4;"></div>
+                <div class="progress-bar" style="width:39%; background-color:#f0f0f0;"><br></div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="py-3">
+            <div class="justify-content-between">
+                <span class="text-left">55%<br>Judging</span>
+                <span class="text-right">45%<br>Prospecting</span>
+            </div>
+            <div class="progress my-1" style="height:8px">
+                <div class="progress-bar" style="width:55%; background-color:#a1b9c4;"></div>
+                <div class="progress-bar" style="width:45%; background-color:#f0f0f0;"><br></div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="py-3">
+            <div class="justify-content-between">
+                <span class="text-left">43%<br>Assertive</span>
+                <span class="text-right">57%<br>Turbulent</span>
+            </div>
+            <div class="progress my-1" style="height:8px">
+                <div class="progress-bar" style="width:43%; background-color:#f0f0f0;"></div>
+                <div class="progress-bar" style="width:57%; background-color:#a1b9c4;"><br></div>
+            </div>
+        </div>
+        
+    
+    
+    <!-- add/delete above THIS line! -->
+    </div>
+    </div>
+
+    </div>
+    </div>
+
+</div>
+<!-- ------------------------------------
+
+                 (5) RESUME
+                 –– the character's official profile!
+                    i designed this to be like a resume
+                 
+                 → if using for irl purposes, do not actually reveal
+                   your true online details!!!
+
+------------------------------------- -->
+<div class="tab-pane" id="resume">
+
+
+    <!--  SEARCH BAR  ------------------------------------- -->
+    <div class="row no-gutters m-2">
+        
+        <div class="col-1 justify-content-between p-2 hidden-sm-down">
+            <span><i class="fas fa-arrow-left"></i></span>
+            <span><i class="fas fa-arrow-right" style="filter: opacity(40%)"></i></span>
+            <span><i class="fas fa-redo"></i></span>
+        </div>
+
+        <div class="col-10 justify-content-between badge-pill bg-faded p-2 mx-auto">
+            <span class="px-1 w-100" style="letter-spacing: 1px"><i class="fas fa-lock px-2"></i>resu.me<span style="filter: opacity(60%)">/mypage</span></span>
+            <span class="mr-2"><i class="far fa-star"></i></span>
+        </div>
+
+        <div class="col-1 justify-content-between p-2 hidden-sm-down">
+            <span><i class="fas fa-list-music"></i></span>
+            <span><img src="https://file.toyhou.se/images/7745356_UbxFaTbtSE8Egg6.png" class="fr-rounded bg-faded" style="max-width:20px; max-height:20px;"></span>
+            <span><i class="fas fa-ellipsis-v"></i></span>
+        </div>
+        
+    </div>
+
+
+
+    <!--  CONTENT  ------------------------------------- -->
+    <div class="card rounded-0 border-0" style="overflow:auto; max-height:449px;">
+    <div class="text-muted text-uppercase justify-content-between font-weight-bold p-3" style="letter-spacing:1px">
+        <span><i class="fas fa-arrow-alt-left mx-1"></i> Back to Webpage</span>
+        <span>
+            <i class="fas fa-th mx-1"></i>
+            <i class="fas fa-paper-plane mx-1"></i>
+            <i class="fas fa-inbox mx-1"></i>
+            <i class="fas fa-edit mx-1"></i>
+        </span>
+    </div>
+    <div class="row no-gutters p-1">
+
+
+        <!---  BASIC INFO  ------------------------------------- -->
+        <div class="col-lg-4 p-2 bg-faded">
+        <div class="card-block h-100">
+            <div class="text-center">
+                
+                <!---- [ PROFILE PICTURE ] ---->
+                <img src="https://file.toyhou.se/images/7745356_UbxFaTbtSE8Egg6.png"
+                class="rounded-circle img-thumbnail p-1 mb-2" style="max-width:150px;"><br>
+                
+                
+                <!---- [ FULL NAME ] ---->
+                <div class="font-weight-bold text-uppercase pt-1">Name Here</div>
+                
+                
+                <!---- [ ROLE/JOB ] ---->
+                <div class="text-primary pb-1">Occupation Here</div>
+                
+                
+                <!---- [ SHORT QUOTE ] ---->
+                <div class="text-muted p-2">
+                    "Praesent vehicula, dolor eget tempus semper, urna est malesuada eros, a placerat risus magna a erat."
+                </div>
+                
+                
+                <!---- [ (NON-CLICKABLE) CONTACTS ] ---->
+                <div class="text-primary pt-3">
+                    <i class="fab fa-facebook mx-1"></i>
+                    <i class="fas fa-envelope mx-1"></i>
+                    <i class="fab fa-instagram mx-1"></i>
+                    <i class="fas fa-phone mx-1"></i>
+                </div><hr class="w-50 my-2">
+                
+            </div>
+        </div>
+        </div>
+        
+        
+        <!---  TRIVIA INFO  ------------------------------------- -->
+        <div class="col-lg-8 p-2" style="overflow:auto; max-height:390px">
+        <div class="card-block h-100">
+            
+            
+            <!---- [ INFO ] ---->
+            <div class="py-2"><div class="row no-gutters">
+              
+              
+                <div class="col-lg-4 justify-content-between py-1 px-3">
+                    <span class="text-muted" style="letter-spacing:1px;">
+                        <i class="far fa-user"></i></span>
+                    <span class="text-right">Name</span>
+                </div>
+                
+                <div class="col-lg-4 justify-content-between py-1 px-3">
+                    <span class="text-muted">
+                        <i class="far fa-calendar-alt"></i></span>
+                    <span class="text-right">Age</span>
+                </div>
+                
+                <div class="col-lg-4 justify-content-between py-1 px-3">
+                    <span class="text-muted">
+                        <i class="far fa-venus-mars"></i></span>
+                    <span class="text-right">Gender (prn/prn)</span>
+                </div>
+                
+                <div class="col-lg-4 justify-content-between py-1 px-3">
+                    <span class="text-muted">
+                        <i class="far fa-dna"></i></span>
+                    <span class="text-right">Race</span>
+                </div>
+                
+                <div class="col-lg-4 justify-content-between py-1 px-3">
+                    <span class="text-muted">
+                        <i class="far fa-birthday-cake"></i></span>
+                    <span class="text-right">Birthday</span>
+                </div>
+                
+                <div class="col-lg-4 justify-content-between py-1 px-3">
+                    <span class="text-muted">
+                        <i class="far fa-lightbulb"></i></span>
+                    <span class="text-right">Goal</span>
+                </div>
+            
+            
+            </div></div>
+            
+            
+            <!---- [ OBJECTIVE ] ---->
+            <div class="py-2"><div class="text-muted">
+            <blockquote style="font-size:13px">
+                
+                <p>Donec quam metus, rutrum et ex eget, tincidunt feugiat neque. Curabitur id leo congue, fringilla nisi eu, cursus eros. Cras venenatis magna tellus, nec pharetra lectus luctus accumsan. Etiam cursus congue rhoncus.</p>
+                
+            </blockquote>
+            </div></div>
+            
+            
+            <!---- [ PREFERENCES ] ---->
+            <div class="py-3">
+            <div class="row no-gutters">
+                
+                <div class="col-lg-6">
+                  <span class="font-weight-bold" style="letter-spacing:1px">Likes</span>
+                    <ul class="text-muted">
+                        <li>content</li>
+                        <li>content</li>
+                        <li>content</li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-6">
+                  <span class="font-weight-bold" style="letter-spacing:1px">Dislikes</span>
+                    <ul class="text-muted">
+                         <li>content</li>
+                        <li>content</li>
+                        <li>content</li>
+                    </ul>
+                </div>
+                
+            </div>
+            </div>
+            
+            
+            <!---- [ SKILLS ] ---->
+            <div class="py-2">
+              <span class="font-weight-bold" style="letter-spacing:1px">Skills</span>
+                <ul class="text-muted">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Suspendisse a felis molestie, porttitor est eget, euismod mauris.</li>
+                    <li>Integer fermentum est vitae dui pretium fermentum.</li>
+                </ul>
+            </div>
+            
+            
+        <!-- [ add more above THIS line! ] -->
+        </div>
+        </div>
+        
+    </div>
+    </div>
+    
+</div>
+<!-- ------------------------------------
+
+
+         DON'T TOUCH THE BELOW THANKS!!!!
+         
+         UR GOOD TO GO!
+
+
+------------------------------------- -->
+</div></div></div></div></div>
+<!-- ------------------------------------
+
+
+                 CREDITS
+
+
+------------------------------------- -->
+<div class="p-2 small text-right">
+<a href="https://toyhou.se/6509472.-f2u-snooping" title="code by jiko">
+
+
+    <i class="far fa-code"></i>
+
+
+</a>
+</div></div></div></div></div>
