@@ -252,7 +252,7 @@ canvas {
     }
 
     .table td,.table th {
-        background-color: #fff!important
+        background-color: #212529!important
     }
 
     .table-bordered td,.table-bordered th {
@@ -274,7 +274,7 @@ html {
 }
 
 body {
-    background-color: #fff;
+    background-color: #222324;
     color: #212529;
     font-family: -apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
     font-size: .9rem;
