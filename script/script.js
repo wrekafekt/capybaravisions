@@ -21,7 +21,7 @@ async function getMaxQuantity() {
 
   // check invite limit
   let invite = await nftContract.invites(ethers.constants.HashZero);
-  let limit = invite['limit'].toNumber();
+  let limit = typeof invite['limit'].toNumber === 'function' ? invite['limit'].toNumber() : invite['limit'];
   let currentBalance = await nftContract.balanceOf(signer.getAddress());
   maxQuantity = limit - currentBalance;
 
