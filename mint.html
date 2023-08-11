@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,40 +11,38 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-  </head>
-  <body>
-     <script>
-     // Check if MetaMask is installed and is connected
-     if (typeof window.ethereum !== 'undefined' && window.ethereum.isMetaMask) {
-       // Check if the current network is Ethereum
-       ethereum.request({ method: 'net_version' }, (error, networkId) => {
-         if (error) {
-           console.error(error);
-         } else if (networkId === '1') {
-           // The current network is Ethereum
-           document.getElementById('network-status').textContent = 'Connected to Polygon';
-         } else {
-           // The current network is not Ethereum
-           document.getElementById('network-status').textContent = 'WRONG NETWORK';
-         }
-       });
-     } else {
-       // MetaMask is not installed or is not connected
-       document.getElementById('network-status').textContent = 'MetaMask not found';
-     }
-   </script>
+</head>
+<body>
     <div class="container mt-5">
       <h3>Mint NFT</h3>
-      <p>Connect</p>
+      <p id="network-status">Connect</p>
       <button class="btn btn-dark" onclick="connect()">Connect wallet</button>
       <p>Click the button below to mint</p>
       <input type="number" id="quantity" min="1">
       <button class="btn btn-dark" onclick="mintPublic(document.getElementById('quantity').value, (success) => console.log(success))">Mint Now</button>
     </div>
-    <script
-      src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
-      type="application/javascript"
-    ></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
     <script src="/script/script.js"></script>
-  </body>
+    <script>
+        // Move your script here to ensure DOM elements are loaded.
+        // Check if MetaMask is installed and is connected
+        if (typeof window.ethereum !== 'undefined' && window.ethereum.isMetaMask) {
+          // Check if the current network is Ethereum
+          ethereum.request({ method: 'net_version' }, (error, networkId) => {
+            if (error) {
+              console.error(error);
+            } else if (networkId === '1') {
+              // The current network is Ethereum Mainnet
+              document.getElementById('network-status').textContent = 'Connected to Ethereum Mainnet';
+            } else {
+              // The current network is not Ethereum
+              document.getElementById('network-status').textContent = 'WRONG NETWORK';
+            }
+          });
+        } else {
+          // MetaMask is not installed or is not connected
+          document.getElementById('network-status').textContent = 'MetaMask not found';
+        }
+    </script>
+</body>
 </html>
