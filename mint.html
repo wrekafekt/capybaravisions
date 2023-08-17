@@ -23,26 +23,5 @@
     </div>
     <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
     <script src="/script/script.js"></script>
-    <script>
-        // Move your script here to ensure DOM elements are loaded.
-        // Check if MetaMask is installed and is connected
-        if (typeof window.ethereum !== 'undefined' && window.ethereum.isMetaMask) {
-          // Check if the current network is Ethereum
-          ethereum.request({ method: 'net_version' }, (error, networkId) => {
-            if (error) {
-              console.error(error);
-            } else if (networkId === '1') {
-              // The current network is Ethereum Mainnet
-              document.getElementById('network-status').textContent = 'Connected to Ethereum Mainnet';
-            } else {
-              // The current network is not Ethereum
-              document.getElementById('network-status').textContent = 'WRONG NETWORK';
-            }
-          });
-        } else {
-          // MetaMask is not installed or is not connected
-          document.getElementById('network-status').textContent = 'MetaMask not found';
-        }
-    </script>
 </body>
 </html>
