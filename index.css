@@ -305,3 +305,89 @@ nav ul li a:hover {
 .links-container a:hover {
     color: #0D8ED5;
 }
+
+.link-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.link-row a {
+    font-size: 1em;
+    margin: 5px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link-row a:hover {
+    color: #0D8ED5;
+}
+
+.link-separator {
+    width: 5px;
+}
+
+.link-row svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.link-row a {
+    display: flex;
+    align-items: center;
+}
+
+.link-separator {
+    width: 20px;
+}
+
+.top-links-container {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.link-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1px;
+}
+
+.top-links-container a {
+    font-size: 1.2em;
+    margin: 5px 15px;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    transition: color 0.3s ease;
+}
+
+.top-links-container a:hover {
+    color: #0D8ED5;
+}
+
+.top-links-container svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
