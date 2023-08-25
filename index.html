@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -13,11 +14,11 @@
 <link href="index.css" rel="stylesheet"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1.0,shrink-to-fit=no" name="viewport"/>
-<meta content="CAPYBARA: VISIONS NFT" name="title">
-<meta content="Capybara, Capy, Capycoin, Milady, Milady Maker, Remilia Collective, NFT, Generative Art, AI Art, Anime Art" name="keyword">
-<meta content="CAPYBARA: VISIONS is an experimental project." name="description"/>
+<meta content="CAPYBARA: VISIONS NFT" name="title"/>
+<meta content="Capybara, Capy, Capycoin, Milady, Milady Maker, Remilia Collective, NFT, Generative Art, AI Art, Anime Art" name="keyword"/>
+<meta content="CAPYBARA: VISIONS is an experimental project." name="description">
 <link href="favicon.ico" rel="icon" type="image/icon type"/>
-<meta content="CAPYBARA: VISIONS" property="og:title"/>
+<meta content="CAPYBARA: VISIONS" property="og:title">
 <meta content="CAPYBARA: VISIONS is an experimental project." property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="index.html" property="og:url"/>
@@ -27,7 +28,15 @@
 <meta content="capybaravisions" name="twitter:site"/>
 <meta content="banner.png" property="og:image"/>
 </meta></meta></head>
-<body><div class="top-links-container"><div class="link-row"><a href="https://etherscan.io/address/0x4D259D525eab5C05442f86b9a83A68BA286c37F3" target="_blank"><svg fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+<body>
+<div class="theme-switch-wrapper">
+<label class="theme-switch" for="checkbox">
+<input id="checkbox" type="checkbox"/>
+<div class="theme-slider"></div>
+</label>
+<span>Enable Dark Mode</span>
+</div>
+<div class="top-links-container"><div class="link-row"><a href="https://etherscan.io/address/0x4D259D525eab5C05442f86b9a83A68BA286c37F3" target="_blank"><svg fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
 <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#333"></path>
 <path d="M13 7h-2v6h6V7h-4z" fill="#333"></path>
 </svg>Etherscan</a><a href="https://blur.io/collection/capybara-visions" target="_blank"><svg fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -60,7 +69,6 @@
     &lt;path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm5.994 7.8l-1.395 6.292c-.068.309-.37.498-.677.392L12 14.803l-2.964 1.48c-.294.146-.626-.06-.746-.366l-1.11-2.832-2.597 2.15c-.263.218-.62.156-.834-.137l-3.15-4.64c-.2-.294-.07-.676.256-.802l18.637-6.795c.32-.117.682.08.76.415zm-11.63 4.14l1.56-1.03.744 2.224 2.486-1.237-2.33-2.195.558-.472 2.677 1.004c.25.093.52-.014.644-.24l1.163-2.13c.12-.223.438-.223.558 0l1.895 3.48-2.856 1.424.69.557c.19.152.438.193.655.104l2.72-1.1...
 &lt;/svg&gt;
     </svg>telegram</a></div></div>
-
 <div class="theme-switch-wrapper">
 <label class="theme-switch" for="checkbox">
 <input id="checkbox" type="checkbox"/>
@@ -71,8 +79,30 @@
 <div class="container">
 <div class="logo">
 <img alt="banner" class="cool-image" src="banner.png"/>
-</a>
-</div>
+</div></div>
+<script>
+    // Getting the checkbox element
+    const darkModeToggle = document.getElementById('checkbox');
+
+    // Checking for previous dark mode preference in local storage
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+        darkModeToggle.checked = true;
+    }
+
+    // Event listener for when the checkbox is changed
+    darkModeToggle.addEventListener('change', () => {
+        if (darkModeToggle.checked) {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('dark-mode', 'enabled');
+        } else {
+            document.body.classList.remove('dark-mode');
+            localStorage.removeItem('dark-mode');
+        }
+    });
+</script>
+</body></html>
+
 <nav>
 <ul>
 <li><a class="cool-link" href="about.html">About</a></li>
@@ -96,7 +126,6 @@
 <div class="image-box" id="animate">
 <img alt="image" class="middle-image" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="200" src="peek.png"/>
 </div>
-
 <div class="about-box">
 <h2>HOW HAS YOUR VISION BEEN LATELY? 📡</h2>
 <p>
@@ -109,7 +138,7 @@
 <hr/>
 <p>CAPYBARA: VISIONS branding, assets and NFT's <br/>are copylefted under the <a href="https://viralpubliclicense.net/">Viral Public License</a>. </p>
 </div>
-</div>
+
 <script src="audio.js"></script>
 <script src="dark-mode.js"></script>
 <script src="animate.js"></script>
@@ -123,5 +152,5 @@
 <script>
     AOS.init();
   </script>
-</body>
-</html>
+
+
