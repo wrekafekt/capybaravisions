@@ -500,3 +500,21 @@ button:hover, .modern-button:hover {
 button:active, .modern-button:active {
     transform: scale(0.95);
 }
+
+/* Keyframes for side-scrolling effect */
+@keyframes side-scroll {
+    0% {
+        transform: translateX(-10%);
+    }
+    50% {
+        transform: translateX(10%);
+    }
+    100% {
+        transform: translateX(-10%);
+    }
+}
+
+/* Applying the animation to the middle-image class */
+.middle-image {
+    animation: side-scroll 10s infinite alternate;
+}
