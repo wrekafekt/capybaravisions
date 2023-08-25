@@ -391,3 +391,112 @@ nav ul li a:hover {
     height: 20px;
     margin-right: 8px;
 }
+
+@media (max-width: 900px) {
+    .welcome-text {
+        font-size: 1.8em;
+    }
+    .modern-button {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+    .parallax {
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .welcome-text {
+        font-size: 2em;
+    }
+    .modern-button {
+        font-size: 16px;
+        padding: 14px 28px;
+    }
+    .parallax {
+        min-height: 500px;
+    }
+}
+
+.welcome-box, .minting-box, .about-box {
+    animation: aos-init;
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-timing-function: ease-out;
+    transition-duration: 400ms;
+}
+.welcome-box {
+    animation-name: slide-up;
+}
+.minting-box {
+    animation-name: slide-down;
+}
+.about-box {
+    animation-name: slide-right;
+}
+
+/* Dark mode toggle button */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+.theme-switch {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 48px;
+}
+.theme-switch input {
+    display:none;
+}
+.theme-slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+.theme-slider:before {
+    background-color: white;
+    bottom: 4px;
+    content: "";
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 16px;
+}
+input:checked + .theme-slider {
+    background-color: #2196F3;
+}
+input:checked + .theme-slider:before {
+    transform: translateX(24px);
+}
+
+/* Dark Mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #FFFFFF;
+}
+
+/* Link hover effects */
+a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+a:hover {
+    transform: scale(1.05);
+}
+
+/* Button hover and active effects */
+button, .modern-button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+button:hover, .modern-button:hover {
+    transform: scale(1.05);
+}
+button:active, .modern-button:active {
+    transform: scale(0.95);
+}
