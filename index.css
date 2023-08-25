@@ -162,7 +162,7 @@ nav ul li a:hover {
 /* Parallax styles */
 .parallax {
   /* The image used */
-  background-image: url("peek.jpg");
+  background-image: url("peek.png");
 
   /* Set a specific height */
   min-height: 500px; 
