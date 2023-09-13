@@ -518,3 +518,29 @@ button:active, .modern-button:active {
 .middle-image {
     animation: side-scroll 10s infinite alternate;
 }
+
+/* Mobile Responsiveness Enhancements */
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    .welcome-box h2, .minting-box h2, .about-box h2 {
+        font-size: 2em;
+    }
+}
+
+/* Interactivity Enhancements */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Dark Mode Enhancements (assuming the theme switcher toggles a .dark-mode class on the body) */
+body.dark-mode {
+    background: #333;
+    color: #f4f4f4;
+}
+body.dark-mode .welcome-box, body.dark-mode .minting-box, body.dark-mode .about-box {
+    background: #444;
+    color: #f4f4f4;
+}
