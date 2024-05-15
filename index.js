@@ -1,12 +1,14 @@
-// Toggle dark mode
-const darkModeToggle = document.getElementById('checkbox');
-darkModeToggle.addEventListener('change', () => {
-    document.body.classList.toggle('dark-mode');
-    localStorage.setItem('dark-mode', darkModeToggle.checked ? 'enabled' : 'disabled');
-});
+document.addEventListener('DOMContentLoaded', () => {
+    const darkModeToggle = document.getElementById('checkbox');
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 
-// Initialize AOS animations
-AOS.init({
-    duration: 1200,
-    once: true
+    if (currentTheme) {
+        document.body.classList.add('dark-mode');
+        darkModeToggle.checked = true;
+    }
+
+    darkModeToggle.addEventListener('change', function() {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', this.checked ? 'dark-mode' : '');
+    });
 });
