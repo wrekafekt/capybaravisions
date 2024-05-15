@@ -1,546 +1,73 @@
-/* Global styles */
-* {
-    box-sizing: border-box;
+body, html {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+.navbar li {
+    float: left;
+}
+.navbar li a {
     display: block;
-}
-
-/* Container styles */
-.container {
-    width: 90%;
-    max-width: 3200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Logo styles */
-.logo img {
-    width: 100%;
-    max-width: 620px;
-    margin-bottom: 2em;
-}
-
-/* Box styles */
-.welcome-box, .minting-box, .about-box {
-    background: #fff;
-    padding: 1.5em;
-    margin-bottom: 2em;
-    border-radius: 5px;
-    box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.1);
+    color: white;
     text-align: center;
-}
-
-/* Welcome box styles */
-.welcome-box {
-  /* Add a linear gradient background */
-  background: linear-gradient(135deg, #2193b0);
-}
-
-.welcome-box h2, .minting-box h2, .about-box h2 {
-  /* Increase the font size */
-  font-size: 2.5em;
-
-  /* Add a subtle text shadow */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-@keyframes textGlow {
-  0%, 100% {
-    text-shadow: 0 0 10px #7fff00, 0 0 20px #7fff00, 0 0 30px #7fff00, 0 0 40px #7fff00;
-  }
-  50% {
-    text-shadow: 0 0 20px #7fff00, 0 0 30px #7fff00, 0 0 40px #7fff00, 0 0 50px #7fff00, 0 0 60px #7fff00;
-  }
-}
-
-.welcome-text {
-  animation: textGlow 0.5s infinite;
-}
-
-/* Music player styles */
-.music-player {
-    margin-bottom: 2em;
-}
-
-/* Twitter link styles */
-.twitter-link a, .minting-box a {
-    color: #1DA1F2;
+    padding: 14px 16px;
     text-decoration: none;
 }
-
-/* Image box styles */
-.image-box {
-    width: 100%;
-    max-width: 1200px;
-    margin-bottom: 2em;
+.navbar li a:hover {
+    background-color: #111;
 }
-
-.image-box img {
-    width: 100%; /* adjusted from 150% */
-    position: relative; /* adjusted from absolute */
-    transition: transform 0.3s ease;
-}
-
-
-
-/* About box styles */
-.about-box p {
-    margin-bottom: 1em;
-}
-
-/* Link styles */
-a {
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #0D8ED5;
-}
-
-/* Theme switch styles */
 .theme-switch-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-}
-
-/* Dark theme styles */
-html[data-theme='dark'] {
-    background-color: #1f1f1f;
-    color: #f1f1f1;
-}
-
-html[data-theme='dark'] .welcome-box,
-html[data-theme='dark'] .minting-box,
-html[data-theme='dark'] .about-box {
-    background-color: #2d2d2d;
-}
-
-/* Navigation styles */
-nav {
-  text-align: center;
-  padding: 1em;
-  background-color: #fff;
-  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-nav ul li {
-  margin: 0 1em;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-  font-size: 1.1em;
-  transition: color 0.3s ease-out;
-}
-
-nav ul li a:hover {
-  color: #1DA1F2;
-}
-
-/* Parallax styles */
-.parallax {
-  /* The image used */
-  background-image: url("peek.png");
-
-  /* Set a specific height */
-  min-height: 500px; 
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* Three container styles */
-.three-container {
-    width: 80%;
-    height: 60vh;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-}
-
-/* Keyframes */
-@keyframes scaleUp {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.05);
-  }
-}
-
-/* Cool link styles */
-.cool-link {
-  position: relative;
-  text-decoration: none;
-  color: #000;
-  overflow: hidden;
-  transition: color 0.2s ease-in-out;
-}
-
-.cool-link:hover {
-  color: #fff;
-}
-
-.cool-link:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  z-index: -1;
-  transition: all 0.2s ease-in-out;
-}
-
-.cool-link:hover:before {
-  height: 0;
-}
-
-/* Cool image styles */
-.cool-image {
-  transition: transform 0.2s;
-}
-
-.cool-image:hover {
-  transform: scale(1.1);
-}
-
-.middle-image {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Modern button styles */
-.modern-button {
-  background-color: #000; /* Change this to match your site's color scheme */
-  color: #fff; /* Change this to match your site's color scheme */
-  border: none;
-  padding: 15px 30px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.modern-button:hover {
-  background-color: #555; /* Change this to match your site's color scheme */
-  color: #000; /* Change this to match your site's color scheme */
-}
-
-/* Blur effect styles */
-.blur-effect {
-  backdrop-filter: blur(10px);
-}
-
-/* Media queries */
-@media (max-width: 600px) {
-  .welcome-text {
-    font-size: 1.5em;
-  }
-  .modern-button {
-    font-size: 12px;
-    padding: 10px 20px;
-  }
-  .parallax {
-    min-height: 300px;
-  }
-}
-
-.links-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    margin-top: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.links-container a {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.links-container a:hover {
-    color: #0D8ED5;
-}
-
-.link-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 15px;
-}
-
-.link-row a {
-    font-size: 1em;
-    margin: 5px 15px;
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.link-row a:hover {
-    color: #0D8ED5;
-}
-
-.link-separator {
-    width: 5px;
-}
-
-.link-row svg {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    vertical-align: middle;
-}
-
-.link-row a {
-    display: flex;
-    align-items: center;
-}
-
-.link-separator {
-    width: 20px;
-}
-
-.top-links-container {
-    display: flex;
-    flex-direction: center;
-    align-items: center;
-    justify-content: center;
-    padding: 0px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.link-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 1px;
-}
-
-.top-links-container a {
-    font-size: 1.2em;
-    margin: 5px 15px;
-    color: #333;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 1px;
-    transition: color 0.3s ease;
-}
-
-.top-links-container a:hover {
-    color: #0D8ED5;
-}
-
-.top-links-container svg {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-}
-
-@media (max-width: 900px) {
-    .welcome-text {
-        font-size: 1.8em;
-    }
-    .modern-button {
-        font-size: 14px;
-        padding: 12px 24px;
-    }
-    .parallax {
-        min-height: 400px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .welcome-text {
-        font-size: 2em;
-    }
-    .modern-button {
-        font-size: 16px;
-        padding: 14px 28px;
-    }
-    .parallax {
-        min-height: 500px;
-    }
-}
-
-.welcome-box, .minting-box, .about-box {
-    animation: aos-init;
-    opacity: 0;
-    transition-property: opacity, transform;
-    transition-timing-function: ease-out;
-    transition-duration: 400ms;
-}
-.welcome-box {
-    animation-name: slide-up;
-}
-.minting-box {
-    animation-name: slide-down;
-}
-.about-box {
-    animation-name: slide-right;
-}
-
-/* Dark mode toggle button */
-.theme-switch-wrapper {
-    display: flex;
-    align-items: center;
+    margin: 20px;
 }
 .theme-switch {
-    display: inline-block;
-    height: 24px;
     position: relative;
-    width: 48px;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
 }
-.theme-switch input {
-    display:none;
+.theme-switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
-.theme-slider {
-    background-color: #ccc;
-    bottom: 0;
+.slider {
+    position: absolute;
     cursor: pointer;
-    left: 0;
-    position: absolute;
-    right: 0;
     top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
     transition: .4s;
+    border-radius: 34px;
 }
-.theme-slider:before {
-    background-color: white;
-    bottom: 4px;
-    content: "";
-    height: 16px;
-    left: 4px;
+.slider:before {
     position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
     transition: .4s;
-    width: 16px;
+    border-radius: 50%;
 }
-input:checked + .theme-slider {
+input:checked + .slider {
     background-color: #2196F3;
 }
-input:checked + .theme-slider:before {
-    transform: translateX(24px);
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
 }
-
-/* Dark Mode styles */
-body.dark-mode {
-    background-color: #121212;
-    color: #FFFFFF;
-}
-
-/* Link hover effects */
-a {
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-a:hover {
-    transform: scale(1.05);
-}
-
-/* Button hover and active effects */
-button, .modern-button {
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-button:hover, .modern-button:hover {
-    transform: scale(1.05);
-}
-button:active, .modern-button:active {
-    transform: scale(0.95);
-}
-
-/* Keyframes for side-scrolling effect */
-@keyframes side-scroll {
-    0% {
-        transform: translateX(-10%);
-    }
-    50% {
-        transform: translateX(10%);
-    }
-    100% {
-        transform: translateX(-10%);
-    }
-}
-
-/* Applying the animation to the middle-image class */
-.middle-image {
-    animation: side-scroll 10s infinite alternate;
-}
-
-/* Mobile Responsiveness Enhancements */
-@media only screen and (max-width: 768px) {
-    .container {
-        max-width: 100%;
-        padding: 0 20px;
-    }
-    .welcome-box h2, .minting-box h2, .about-box h2 {
-        font-size: 2em;
-    }
-}
-
-/* Interactivity Enhancements */
-a:hover {
-    text-decoration: underline;
-}
-
-/* Dark Mode Enhancements (assuming the theme switcher toggles a .dark-mode class on the body) */
-body.dark-mode {
-    background: #333;
-    color: #f4f4f4;
-}
-body.dark-mode .welcome-box, body.dark-mode .minting-box, body.dark-mode .about-box {
-    background: #444;
-    color: #f4f4f4;
+input:checked + .slider:before {
+    transform: translateX(26px);
 }
