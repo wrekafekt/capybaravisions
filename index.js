@@ -1,14 +1,21 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const darkModeToggle = document.getElementById('checkbox');
-    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-
-    if (currentTheme) {
-        document.body.classList.add('dark-mode');
-        darkModeToggle.checked = true;
+document.addEventListener('DOMContentLoaded', (event) => {
+    const checkbox = document.getElementById('checkbox');
+    if (checkbox) {
+        checkbox.addEventListener('change', function(event){
+            if(this.checked) {
+                trans()
+                document.documentElement.setAttribute('data-theme', 'dark')
+            } else {
+                trans()
+                document.documentElement.setAttribute('data-theme', 'light')
+            }
+        });
     }
 
-    darkModeToggle.addEventListener('change', function() {
-        document.body.classList.toggle('dark-mode');
-        localStorage.setItem('theme', this.checked ? 'dark-mode' : '');
-    });
+    let trans = () => {
+        document.documentElement.classList.add('transition');
+        window.setTimeout(() => {
+            document.documentElement.classList.remove('transition')
+        }, 1000)
+    }
 });
