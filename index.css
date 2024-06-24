@@ -1,49 +1,234 @@
-:root {
-    --bg-color: #fff;
-    --text-color: #333;
-    --link-color: #007BFF;
-    --nav-bg-color: #333;
-    --nav-text-color: white;
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
-.dark-mode {
-    --bg-color: #333;
-    --text-color: #f4f4f4;
-    --link-color: #1DA1F2;
-    --nav-bg-color: #222;
-    --nav-text-color: #ddd;
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
 }
 
-body.theme {
+.theme {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --accent-color: #ff6b6b;
+}
+
+.theme.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --accent-color: #ff9a9e;
+}
+
+body {
     background-color: var(--bg-color);
     color: var(--text-color);
 }
 
-.navbar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    background-color: var(--nav-bg-color);
-    overflow: hidden;
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.navbar li {
-    float: left;
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.navbar li a {
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
     text-decoration: none;
-    color: var(--nav-text-color);
+    color: var(--text-color);
+    transition: color 0.3s ease;
 }
 
-.navbar li a:hover {
-    background-color: #111;
+.nav-links a:hover {
+    color: var(--accent-color);
 }
 
-.banner img {
-    width: 100%;
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Welcome Section */
+.welcome-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.cool-image {
+    max-width: 100%;
     height: auto;
+}
+
+/* NFT Showcase */
+.nft-showcase {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.gradient-bg {
+    background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 300px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 1rem;
+}
+
+.card p {
+    margin: 0 1rem 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.social-icon {
+    display: inline-block;
+    margin-right: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        padding: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .footer-section {
+        flex: 100%;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
 }
