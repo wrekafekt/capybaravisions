@@ -9,11 +9,14 @@
     <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
     <link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body class="theme">
     <header>
         <nav class="navbar">
-            <ul>
+            <div class="logo">CAPYBARA: VISIONS</div>
+            <div class="hamburger">&#9776;</div>
+            <ul class="nav-links">
                 <li><a href="about.html">Lore</a></li>
                 <li><a href="roadmap.html">The Plan</a></li>
                 <li><a href="https://twitter.com/capybaravisions" target="_blank">Twitter</a></li>
@@ -22,9 +25,13 @@
         </nav>
     </header>
 
-    <div class="banner">
-        <img src="banner.png" alt="CAPYBARA: VISIONS Banner">
-    </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>CAPYBARA: VISIONS</h1>
+            <p>Unique NFT Collection</p>
+            <a href="#" class="cta-button">Explore Collection</a>
+        </div>
+    </section>
 
     <div class="theme-switch-wrapper">
         <label class="theme-switch" for="checkbox">
@@ -34,16 +41,63 @@
         <span>Enable Dark Mode</span>
     </div>
 
-    <div class="welcome-box">
-        <h2>Welcome to CAPYBARA: VISIONS!</h2>
-        <div id="three-container" data-aos="fade-up" data-aos-duration="1000">
-            <img src="peek.png" alt="Peek Image" class="cool-image">
+    <section class="welcome-section">
+        <div class="welcome-box" data-aos="fade-up" data-aos-duration="1000">
+            <h2>Welcome to CAPYBARA: VISIONS!</h2>
+            <div id="three-container">
+                <img src="peek.png" alt="Peek Image" class="cool-image">
+            </div>
+            <div class="about-box">
+                <h2>How's your vision? 📡</h2>
+                <p>🎨Art by <a href="https://twitter.com/wrekafekt">wrekafekt</a>🎨</p>
+            </div>
         </div>
-        <div class="about-box">
-            <h2>How's your vision? 📡</h2>
-            <p>🎨Art by <a href="https://twitter.com/wrekafekt">wrekafekt</a>🎨</p>
+    </section>
+
+    <section class="nft-showcase gradient-bg">
+        <h2>Featured NFTs</h2>
+        <div class="card-container">
+            <div class="card" data-aos="fade-up" data-aos-duration="1000">
+                <img src="nft1.jpg" alt="NFT 1">
+                <h3>Capybara Dream</h3>
+                <p>A surreal vision of capybara's world</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <img src="nft2.jpg" alt="NFT 2">
+                <h3>Cosmic Capybara</h3>
+                <p>Capybara floating through the cosmos</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <img src="nft3.jpg" alt="NFT 3">
+                <h3>Capybara Oasis</h3>
+                <p>A lush, vibrant capybara paradise</p>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>CAPYBARA: VISIONS is a unique NFT collection featuring surreal and captivating capybara-inspired digital art.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">Lore</a></li>
+                    <li><a href="roadmap.html">The Plan</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <a href="https://twitter.com/capybaravisions" class="social-icon">Twitter</a>
+                <a href="https://discord.gg/Cj7PJdFG" class="social-icon">Discord</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 CAPYBARA: VISIONS. All rights reserved.
+        </div>
+    </footer>
 
     <script src="index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
