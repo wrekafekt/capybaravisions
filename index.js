@@ -1,21 +1,18 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    const checkbox = document.getElementById('checkbox');
-    if (checkbox) {
-        checkbox.addEventListener('change', function(event){
-            if(this.checked) {
-                trans()
-                document.documentElement.setAttribute('data-theme', 'dark')
-            } else {
-                trans()
-                document.documentElement.setAttribute('data-theme', 'light')
-            }
-        });
-    }
+// Responsive Navigation
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
-    let trans = () => {
-        document.documentElement.classList.add('transition');
-        window.setTimeout(() => {
-            document.documentElement.classList.remove('transition')
-        }, 1000)
-    }
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
 });
+
+// Dark Mode Toggle
+const checkbox = document.getElementById('checkbox');
+const theme = document.querySelector('.theme');
+
+checkbox.addEventListener('change', () => {
+    theme.classList.toggle('dark-mode');
+});
+
+// Initialize AOS
+AOS.init();
