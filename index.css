@@ -100,6 +100,35 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+/* Parallax Section */
+.parallax-section {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    perspective: 1px;
+}
+
+.parallax-bg {
+    background-image: url('parallax-bg.jpg');
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+}
+
+.parallax-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
 /* Welcome Section */
 .welcome-section {
     padding: 4rem 2rem;
@@ -109,6 +138,17 @@ body {
 .cool-image {
     max-width: 100%;
     height: auto;
+}
+
+/* 3D Model Section */
+.capybara-3d-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#capybara-3d-model {
+    width: 100%;
+    height: 400px;
 }
 
 /* NFT Showcase */
@@ -199,6 +239,16 @@ footer {
     margin-top: 2rem;
     padding-top: 1rem;
     border-top: 1px solid var(--text-color);
+}
+
+/* Interactive Background */
+#particle-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 /* Responsive Design */
