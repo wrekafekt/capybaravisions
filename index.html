@@ -3,121 +3,396 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAPYBARA: VISIONS - Unique NFT Collection</title>
-    <link rel="stylesheet" href="index.css">
-    <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-    <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-    <link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Capybara Visions</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .theme {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --accent-color: #ff6b6b;
+        }
+        .theme.dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #ffffff;
+            --accent-color: #ff9a9e;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        /* Navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: var(--bg-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+        .hamburger {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        /* Hero Section */
+        .hero {
+            background-image: url('https://imagizer.imageshack.com/img538/3316/n2zNjE.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+        }
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        /* Parallax Section */
+        .parallax-section {
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            perspective: 1px;
+        }
+        .parallax-bg {
+            background-image: url('https://imagizer.imageshack.com/img538/3316/n2zNjE.jpg');
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            transform: translateZ(-1px) scale(2);
+            z-index: -1;
+        }
+        .parallax-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+        }
+        /* Welcome Section */
+        .welcome-section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .cool-image {
+            max-width: 100%;
+            height: auto;
+        }
+        /* 3D Model Section */
+        .capybara-3d-section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        #capybara-3d-model {
+            width: 100%;
+            height: 400px;
+        }
+        /* NFT Showcase */
+        .nft-showcase {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .gradient-bg {
+            background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+        }
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .card {
+            background-color: var(--bg-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            width: 300px;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card h3 {
+            margin: 1rem;
+        }
+        .card p {
+            margin: 0 1rem 1rem;
+        }
+        /* Footer */
+        footer {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 2rem;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .footer-section {
+            flex: 1;
+            margin-right: 2rem;
+        }
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        .social-icon {
+            display: inline-block;
+            margin-right: 1rem;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--text-color);
+        }
+        /* Interactive Background */
+        #particle-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-color);
+                padding: 1rem;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-links li {
+                margin: 1rem 0;
+            }
+            .footer-section {
+                flex: 100%;
+                margin-right: 0;
+                margin-bottom: 2rem;
+            }
+        }
+        /* Additional Product Styles */
+        .product-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .product-header img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            flex: 1 1 40%;
+            margin-right: 20px;
+        }
+        .product-details {
+            max-width: 600px;
+            flex: 1 1 50%;
+            padding: 20px;
+        }
+        .product-details h1 {
+            margin-top: 0;
+            font-size: 32px;
+        }
+        .product-details p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+        .cta-buttons {
+            margin-top: 20px;
+        }
+        .cta-buttons a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-right: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .cta-buttons a:hover {
+            background-color: #0056b3;
+        }
+        .cta-buttons a:active {
+            background-color: #003f7f;
+        }
+        .additional-info {
+            margin-top: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .additional-info h2 {
+            font-size: 28px;
+            margin-top: 0;
+        }
+        .additional-info p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body class="theme">
-    <canvas id="particle-background"></canvas>
-
     <header>
-        <nav class="navbar">
-            <div class="logo">CAPYBARA: VISIONS</div>
-            <div class="hamburger">&#9776;</div>
+        <div class="navbar">
+            <div class="logo">Capybara Visions</div>
             <ul class="nav-links">
-                <li><a href="about.html">Lore</a></li>
-                <li><a href="roadmap.html">The Plan</a></li>
-                <li><a href="https://twitter.com/capybaravisions" target="_blank">Twitter</a></li>
-                <li><a href="https://discord.gg/Cj7PJdFG">Discord</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
-        </nav>
+            <div class="hamburger">☰</div>
+        </div>
     </header>
-
     <section class="hero">
         <div class="hero-content">
-            <h1>CAPYBARA: VISIONS</h1>
-            <p>Unique NFT Collection</p>
-            <a href="#" class="cta-button">Explore Collection</a>
+            <h1>CAPYBARA VISIONS</h1>
+            <a href="#" class="cta-button">How's your vision?</a>
         </div>
     </section>
-
-    <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="checkbox">
-            <input id="checkbox" type="checkbox"/>
-            <div class="slider round"></div>
-        </label>
-        <span>Enable Dark Mode</span>
+    <div class="container">
+        <div class="product-header">
+            <img src="https://imagizer.imageshack.com/img538/3316/n2zNjE.jpg" alt="Product Image">
+            <div class="product-details">
+                <h1>CAPYBARA VISIONS</h1>
+                <p></p>
+                <div class="cta-buttons">
+                    
+                    <a href="#" id="learnMore">DONT CLICK</a>
+                </div>
+            </div>
+        </div>
+        <div class="additional-info" id="additionalInfo" style="display:none;">
+            <h2>Additional Information</h2>
+        </div>
     </div>
-
-    <section class="parallax-section">
-        <div class="parallax-bg"></div>
-        <div class="parallax-content">
-            <h2>Discover the Capybara Universe</h2>
-            <p>Immerse yourself in our unique digital world</p>
-        </div>
-    </section>
-
-    <section class="welcome-section">
-        <div class="welcome-box" data-aos="fade-up" data-aos-duration="1000">
-            <h2>Welcome to CAPYBARA: VISIONS!</h2>
-            <div id="three-container">
-                <img src="peek.png" alt="Peek Image" class="cool-image">
-            </div>
-            <div class="about-box">
-                <h2>How's your vision? 📡</h2>
-                <p>🎨Art by <a href="https://twitter.com/wrekafekt">wrekafekt</a>🎨</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="capybara-3d-section">
-        <h2>Interactive Capybara</h2>
-        <div id="capybara-3d-model"></div>
-    </section>
-
-    <section class="nft-showcase gradient-bg">
-        <h2>Featured NFTs</h2>
-        <div class="card-container">
-            <div class="card" data-aos="fade-up" data-aos-duration="1000">
-                <img src="nft1.jpg" alt="NFT 1">
-                <h3>Capybara Dream</h3>
-                <p>A surreal vision of capybara's world</p>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                <img src="nft2.jpg" alt="NFT 2">
-                <h3>Cosmic Capybara</h3>
-                <p>Capybara floating through the cosmos</p>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                <img src="nft3.jpg" alt="NFT 3">
-                <h3>Capybara Oasis</h3>
-                <p>A lush, vibrant capybara paradise</p>
-            </div>
-        </div>
-    </section>
-
     <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <h3>About Us</h3>
-                <p>CAPYBARA: VISIONS is a unique NFT collection featuring surreal and captivating capybara-inspired digital art.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="about.html">Lore</a></li>
-                    <li><a href="roadmap.html">The Plan</a></li>
+                    <li><a href="#" class="social-icon">Myspace</a></li>
+                    <li><a href="#" class="social-icon">Geocities</a></li>
+                    <li><a href="#" class="social-icon">Livejournal</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Connect</h3>
-                <a href="https://twitter.com/capybaravisions" class="social-icon">Twitter</a>
-                <a href="https://discord.gg/Cj7PJdFG" class="social-icon">Discord</a>
+                <h3>Contact</h3>
+                <ul>
+                    <li>Email: contact@capybaravisions.art</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Party</a></li>
+                    <li><a href="#">Terms of Servants</a></li>
+                </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2024 CAPYBARA: VISIONS. All rights reserved.
+            <p>&copy; 2024 Capybara Visions. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="index.js"></script>
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        document.getElementById('learnMore').addEventListener('click', function(event) {
+            event.preventDefault();
+            var additionalInfo = document.getElementById('additionalInfo');
+            if (additionalInfo.style.display === 'none' || additionalInfo.style.display === '') {
+                additionalInfo.style.display = 'block';
+                this.textContent = 'Show Less';
+            } else {
+                additionalInfo.style.display = 'none';
+                this.textContent = 'Learn More';
+            }
+        });
+    </script>
 </body>
 </html>
