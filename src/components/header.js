@@ -1,9 +1,9 @@
-import React from "react"
-import { Box, Flex, Link } from "@chakra-ui/react"
-import { Link as GatsbyLink } from "gatsby"
+import React from "react";
+import { Box, Flex, Link, Text } from "@chakra-ui/react";
+import { Link as GatsbyLink } from "gatsby";
 
 const Header = () => (
-  <Box bg="gray.800" color="white" p={4}>
+  <Box bg="blue.600" color="white" p={4}>
     <Flex justify="space-between" align="center">
       <Link as={GatsbyLink} to="/" fontWeight="bold" fontSize="xl">
         Capybara Visions
@@ -18,6 +18,6 @@ const Header = () => (
       </Flex>
     </Flex>
   </Box>
-)
+);
 
-export default Header
+export default Header;
