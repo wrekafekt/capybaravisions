@@ -1,5 +1,6 @@
 import { extendTheme, ChakraProvider } from "@chakra-ui/react"
 import { mode } from "@chakra-ui/theme-tools"
+import "./src/components/global.css";
 
 const theme = extendTheme({
   styles: {
