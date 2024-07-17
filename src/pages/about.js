@@ -1,6 +1,6 @@
-import React from "react"
-import { Box, Heading, Text } from "@chakra-ui/react"
-import Layout from "../components/layout"
+import React from "react";
+import { Heading, Text } from "@chakra-ui/react";
+import Layout from "../components/layout";
 
 const AboutPage = () => (
   <Layout>
@@ -11,6 +11,6 @@ const AboutPage = () => (
       Capybara Visions is an artistic project exploring the boundaries of visual creativity. Learn more about our journey and mission.
     </Text>
   </Layout>
-)
+);
 
-export default AboutPage
+export default AboutPage;
