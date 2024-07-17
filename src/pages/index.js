@@ -8,7 +8,7 @@ const IndexPage = () => (
   <Layout>
     {/* Hero Section */}
     <Box
-      bgImage="url('/path/to/your/hero-image.jpg')"
+      bgImage="url('/src/images/capy1.jpg)"
       bgPos="center"
       bgSize="cover"
       height="100vh"
@@ -31,21 +31,21 @@ const IndexPage = () => (
       <SimpleGrid columns={[1, 2, 3]} spacing={10}>
         <AnimatedBox whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <ProjectCard
-            image="/path/to/image1.jpg"
+            image="/src/images/capy2.jpg"
             title="Project One"
             description="Description for project one."
           />
         </AnimatedBox>
         <AnimatedBox whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <ProjectCard
-            image="/path/to/image2.jpg"
+            image="/src/images/capy3.jpg"
             title="Project Two"
             description="Description for project two."
           />
         </AnimatedBox>
         <AnimatedBox whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <ProjectCard
-            image="/path/to/image3.jpg"
+            image="/src/images/capy4.jpg"
             title="Project Three"
             description="Description for project three."
           />
