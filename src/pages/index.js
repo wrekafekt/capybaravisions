@@ -1,11 +1,14 @@
 import React from 'react';
-import { Box, Heading, Text, Button } from '@chakra-ui/react';
+import { Box, Heading, Text, Button, SimpleGrid } from '@chakra-ui/react';
 import Layout from '../components/layout';
+import ProjectCard from '../components/ProjectCard';
+import AnimatedBox from '../components/AnimatedBox';
 
 const IndexPage = () => (
   <Layout>
+    {/* Hero Section */}
     <Box
-      bgImage="url('/capy.jpg')"
+      bgImage="url('/path/to/your/hero-image.jpg')"
       bgPos="center"
       bgSize="cover"
       height="100vh"
@@ -20,6 +23,34 @@ const IndexPage = () => (
         <Text mb={4}>Discover the art and vision of Capybara. Explore the collection and get inspired.</Text>
         <Button colorScheme="pink" size="lg">Explore Now</Button>
       </Box>
+    </Box>
+
+    {/* Projects Section */}
+    <Box p={8}>
+      <Heading as="h2" mb={6}>Our Projects</Heading>
+      <SimpleGrid columns={[1, 2, 3]} spacing={10}>
+        <AnimatedBox whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <ProjectCard
+            image="/path/to/image1.jpg"
+            title="Project One"
+            description="Description for project one."
+          />
+        </AnimatedBox>
+        <AnimatedBox whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <ProjectCard
+            image="/path/to/image2.jpg"
+            title="Project Two"
+            description="Description for project two."
+          />
+        </AnimatedBox>
+        <AnimatedBox whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <ProjectCard
+            image="/path/to/image3.jpg"
+            title="Project Three"
+            description="Description for project three."
+          />
+        </AnimatedBox>
+      </SimpleGrid>
     </Box>
   </Layout>
 );
