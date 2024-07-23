@@ -29,5 +29,5 @@ module.exports = {
       },
     },
   ],
-  pathPrefix: "/capybara-visions",
+  pathPrefix: "/capybaravisions",
 }
