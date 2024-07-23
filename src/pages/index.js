@@ -8,7 +8,7 @@ const IndexPage = () => (
   <Layout>
     {/* Hero Section */}
     <Box
-      bgImage="url('/src/images/capy1.png)"
+      bgImage="url('src/images/capy1.png)"
       bgPos="center"
       bgSize="cover"
       height="100vh"
