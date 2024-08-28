@@ -31,21 +31,21 @@ const IndexPage = () => (
       <SimpleGrid columns={[1, 2, 3]} spacing={10}>
         <AnimatedBox whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <ProjectCard
-            image="./src/images/hero.jpg" // Corrected path
+            image="./src/images/capy1.png" // Corrected path
             title="Project One"
             description="Description for project one."
           />
         </AnimatedBox>
         <AnimatedBox whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <ProjectCard
-            image="./src/images/hero.jpg" // Corrected path
+            image="./src/images/capy2.png" // Corrected path
             title="Project Two"
             description="Description for project two."
           />
         </AnimatedBox>
         <AnimatedBox whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <ProjectCard
-            image="./src/images/hero.jpg" // Corrected path
+            image="./src/images/capy3.png" // Corrected path
             title="Project Three"
             description="Description for project three."
           />
