@@ -8,7 +8,7 @@ const IndexPage = () => (
   <Layout>
     {/* Hero Section */}
     <Box
-      bgImage="url('./capybaravisions/src/images/capy1.png')" // Corrected path
+      bgImage="url('./capybaravisions/src/images/hero.jpg')" // Corrected path
       bgPos="center"
       bgSize="cover"
       height="100vh"
